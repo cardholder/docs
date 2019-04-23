@@ -28,7 +28,7 @@ Cardholder ist eine Applikation, die es ermöglicht online Kartenspiele zu spiel
 
 Das Ziel von Cardholder ist es, dass Familie, Freunde und Kartenspiel-Begeisterte zusammen Kartenspiele spielen können. Die Motivation ist eine freie und für jeden zugängliche Software bereitzustellen. Es werden verschiedene Kartenspiele zur Verfügung gestellt. 
 
-Cardholder setzt vorraus, dass die Nutzer die entsprechenden Regeln der jeweiligen Kartenspiele kennt. Weitere Vorkenntnisse sind nicht erforderlich.  
+Cardholder setzt vorraus, dass die Nutzer die entsprechenden Regeln der jeweiligen Kartenspiele kennen. Weitere Vorkenntnisse sind nicht erforderlich.  
 
 Bei Cardholder ist es nicht möglich eigene Kartenspiele hinzuzufügen. Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
