@@ -20,7 +20,8 @@ __Inhaltsverzeichnis__
 
 ## 1.1 Beschreibung
 
-__Projektname:__ Cardholder
+__Projektname:__ Cardholder 
+  
 Cardholder ist eine Applikation, die es ermöglicht online Kartenspiele zu spielen. Dabei kann man mit Freunden und Menschen aus aller Welt spielen. Es gibt eine Auswahl von verschiedenen Kartenspielen. Die Nutzer können die Kartenspiele ohne Anmeldung spielen. Spieler sollen andere Nutzer zu einem Spiel einladen können. Cardholder ist als App und als Webseite verfügbar.
 
 ## 1.2 Ziele
