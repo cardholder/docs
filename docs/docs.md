@@ -28,18 +28,10 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ## Stakeholder
 
-| Funktion | Name | Kontakt | Verfügbarkeit | Wissen | Interesse & Ziele | Relevanz |
-|:---------|:-----|:--------|:--------------|:-------|:------------------|:---------|
-|          |      |         |               |        |                   |          |
-
-
-Beispiel
-
-| Funktion              | Name        | Kontakt        | Verfügbarkeit                                                           | Wissen                                                                  | Interesse & Ziele                         | Relevanz                                                   |
-|:----------------------|:------------|:---------------|:------------------------------------------------------------------------|:------------------------------------------------------------------------|:------------------------------------------|:-----------------------------------------------------------|
-| Leiter der Bibliothek | Herr Bauer  | Tel. 409000    | Von 9-19 Uhr telefonisch erreichbar, Mitarbeit zu 30% möglich, Nürnberg | Kennt das Altsystem aus der Anwendersicht, soll mit dem System arbeiten | Vereinfachung der Ausleihprozesse         | Fachlicher Entscheider                                     |
-| Administrator         | Herr Heiner | Heiner@gmx.net | Per E-Mail, immer erreichbar, Verfügbarkeit 50%, Nürnberg               | Vertraut mit vergleichbarer Verwaltungssoftware                         | Stabiles System, geringer Wartungsaufwand | Informationslieferant bzgl. Wartungsanforderungen          |
-| Product-Owner         | Paul Ottmer | po@ottmer.de   | Per E-Mail und tel. tagsüber, Verfügbarkeit 100%, Nürnberg              | Koordinator für die Inputs der Stakeholder                              | ROI des Systems sicherstellen             | Entscheider - als Koordinator der Stakeholderanforderungen |
+| Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                               | Relevanz    |
+| ------------- | ------------------------ | ------------------------------- | ------------- | -------------------------------------------- | ----------------------------------------------- | ----------- |
+| Spieler       | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit Freunden online Kartenspiele spielen | Endnutzer   |
+| Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | 24/7          | Vertraut mit Fullstack-Anwendungen           | Koordination                                    | Entscheider |
 
 ## Funktionale Anforderungen
 
