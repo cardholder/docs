@@ -29,7 +29,7 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 ## Stakeholder
 
 | Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                               | Relevanz    |
-| ------------- | ------------------------ | ------------------------------- | ------------- | -------------------------------------------- | ----------------------------------------------- | ----------- |
+|:--------------|:-------------------------|:--------------------------------|:--------------|:---------------------------------------------|:------------------------------------------------|:------------|
 | Spieler       | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit Freunden online Kartenspiele spielen | Endnutzer   |
 | Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | 24/7          | Vertraut mit Fullstack-Anwendungen           | Koordination                                    | Entscheider |
 
@@ -107,24 +107,16 @@ __Mindestanforderungen an den Server für das Backend__
     - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
     - Strukturierung der User Stories in funktionale Gruppen
 
-### Schablone für User Stories
+### User Stories
 
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz**   |
-|:--------|:---------------|:------------|:----------------|
-| Wer     | Was            | Warum       | Wann akzeptiert |
-
-Beispiel 1
-
-| **Als**  | **möchte ich**                                | **so dass**     | **Akzeptanz**         |
-|:---------|:----------------------------------------------|:----------------|:----------------------|
-| Benutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann | Lösung wird angezeigt |
-
-Beispiel 2
-
-| **Name** | **In meiner Rolle als**... | ...**möchte ich**...                          | ..., **so dass**... | **Erf�llt, wenn**...  | **Priorit�t** |
-|:---------|:--------------------------:|:----------------------------------------------|:--------------------|:----------------------|:--------------|
-| Lernen   |          Benutzer          | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann     | Lösung wird angezeigt | Muss          |
-
+| **Als**  | **möchte ich**              | **so dass**                                                                                           | **Akzeptanz**                |
+|:---------|:----------------------------|:------------------------------------------------------------------------------------------------------|:-----------------------------|
+| Benutzer | Kartenspiele online spielen | ich in meiner Freizeit mit Freunden Kartenspiele spielen kann                                         | Spiel ist spielbar           |
+| Benutzer | eine Lobby erstellen        | ich mit anderen Spieler spielen kann                                                                  | Andere können beitreten      |
+| Benutzer | einer Lobby beitreten       | ich in meiner Freizeit mit Freunden und Fremden Kartenspiele spielen kann                             | Spiel ist spielbar           |
+| Benutzer | meine Lobby einstellen      | ich die Spieleranzahl, Kartenspiel und ob es eine öffentliche oder private Lobby ist, einstellen kann | Lobby erstellen              |
+| Benutzer | Freunde einladen            | ich mit meinen Freunden zusammen spiele können                                                        | Freund kann beitreten        |
+| Benutzer | Andere Spieler entfernen    | ich als Lobby Leiter andere Spieler entfernen kann                                                    | Anderer Spieler ist entfernt |
 
 # __Technische Beschreibung__
 
