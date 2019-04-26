@@ -16,18 +16,10 @@ Bei Cardholder ist es nicht möglich eigene Kartenspiele hinzuzufügen. Des Weit
 
 ## Stakeholder
 
-| Funktion | Name | Kontakt | Verfügbarkeit | Wissen  | Interesse & Ziele  | Relevanz  |
-|---|---|---|---|---|---|---|
-|  |   |   |   |   |   |   |
-
-
-Beispiel
-
-| Funktion | Name | Kontakt | Verfügbarkeit | Wissen  | Interesse & Ziele  | Relevanz  |
-|---|---|---|---|---|---|---|
-| Leiter der Bibliothek  |  Herr Bauer | Tel. 409000  | Von 9-19 Uhr telefonisch erreichbar, Mitarbeit zu 30% möglich, Nürnberg  | Kennt das Altsystem aus der Anwendersicht, soll mit dem System arbeiten  | Vereinfachung der Ausleihprozesse  | Fachlicher Entscheider  |
-| Administrator  | Herr Heiner  | Heiner@gmx.net  | Per E-Mail, immer erreichbar, Verfügbarkeit 50%, Nürnberg  | Vertraut mit vergleichbarer Verwaltungssoftware   |  Stabiles System, geringer Wartungsaufwand | Informationslieferant bzgl. Wartungsanforderungen  |
-| Product-Owner  | Paul Ottmer  |  po@ottmer.de | Per E-Mail und tel. tagsüber, Verfügbarkeit 100%, Nürnberg  | Koordinator für die Inputs der Stakeholder  | ROI des Systems sicherstellen  | Entscheider - als Koordinator der Stakeholderanforderungen  |
+| Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                               | Relevanz    |
+| ------------- | ------------------------ | ------------------------------- | ------------- | -------------------------------------------- | ----------------------------------------------- | ----------- |
+| Spieler       | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit Freunden online Kartenspiele spielen | Endnutzer   |
+| Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | 24/7          | Vertraut mit Fullstack-Anwendungen           | Koordination                                    | Entscheider |
 
 ## Funktionale Anforderungen
     - Use-Case Diagramme
@@ -44,27 +36,27 @@ Beispiel
 ### Qualitätsmerkmale
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
-Qualitätsmerkmal | sehr gut | gut | normal | nicht relevant
----|---|---|---|---
-**Zuverlüssigkeit** | | | | |
-Fehlertoleranz |X|-|-|-|
-Wiederherstellbarkeit |X|-|-|-|
-Ordnungsmäßigkeit |X|-|-|-|
-Richtigkeit |X|-|-|-|
-Konformität |-|X|-|-|
-**Benutzerfreundlichkeit** | | | | |
-Installierbarkeit |-|-|X|-|
-Verständlichkeit |X|-|-|-|
-Erlernbarkeit |-|X|-|-|
-Bedienbarkeit |-|X|-|-|
-**Performance** | | | | |
-Zeitverhalten |-|-|X|-|
-Effizienz|-|-|-|X|
-**Sicherheit** | | | | |
-Analysierbarkeit |X|-|-|-|
-Modifizierbarkeit |-|-|-|X|
-Stabilität |X|-|-|-|
-Prüfbarkeit |X|-|-|-|
+| Qualitätsmerkmal           | sehr gut | gut | normal | nicht relevant |
+| -------------------------- | -------- | --- | ------ | -------------- |
+| **Zuverlüssigkeit**        |          |     |        |                |
+| Fehlertoleranz             | X        | -   | -      | -              |
+| Wiederherstellbarkeit      | X        | -   | -      | -              |
+| Ordnungsmäßigkeit          | X        | -   | -      | -              |
+| Richtigkeit                | X        | -   | -      | -              |
+| Konformität                | -        | X   | -      | -              |
+| **Benutzerfreundlichkeit** |          |     |        |                |
+| Installierbarkeit          | -        | -   | X      | -              |
+| Verständlichkeit           | X        | -   | -      | -              |
+| Erlernbarkeit              | -        | X   | -      | -              |
+| Bedienbarkeit              | -        | X   | -      | -              |
+| **Performance**            |          |     |        |                |
+| Zeitverhalten              | -        | -   | X      | -              |
+| Effizienz                  | -        | -   | -      | X              |
+| **Sicherheit**             |          |     |        |                |
+| Analysierbarkeit           | X        | -   | -      | -              |
+| Modifizierbarkeit          | -        | -   | -      | X              |
+| Stabilität                 | X        | -   | -      | -              |
+| Prüfbarkeit                | X        | -   | -      | -              |
 
 ## Graphische Benutzerschnittstelle
     - GUI-Mockups passend zu User Stories
@@ -79,21 +71,21 @@ Prüfbarkeit |X|-|-|-|
 
 ### Schablone für User Stories
 
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| Wer | Was | Warum | Wann akzeptiert |
+| **Als** | **möchte ich** | **so dass** | **Akzeptanz**   |
+| :------ | :------------- | :---------- | :-------------- |
+| Wer     | Was            | Warum       | Wann akzeptiert |
 
 Beispiel 1
 
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
+| **Als**  | **möchte ich**                                | **so dass**     | **Akzeptanz**         |
+| :------- | :-------------------------------------------- | :-------------- | :-------------------- |
 | Benutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann | Lösung wird angezeigt |
 
 Beispiel 2
 
-| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erf�llt, wenn**... | **Priorit�t**   |
-|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
+| **Name** | **In meiner Rolle als**... | ...**möchte ich**...                          | ..., **so dass**... | **Erf�llt, wenn**...  | **Priorit�t** |
+| :------- | :------------------------: | :-------------------------------------------- | :------------------ | :-------------------- | :------------ |
+| Lernen   |          Benutzer          | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann     | Lösung wird angezeigt | Muss          |
 
 
 # __Technische Beschreibung__
@@ -134,9 +126,9 @@ Beispiel 2
     - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
     - Rollendefinition und Zuordnung
 
-| Softwarebaustein | Person(en) |
-|----------|-----------|
-| Komponente A | Thomas Mustermann |
+| Softwarebaustein | Person(en)        |
+| ---------------- | ----------------- |
+| Komponente A     | Thomas Mustermann |
 
 ### Rollen
 
@@ -151,8 +143,8 @@ Implementiert die funktionale Logik der Anwendung. Hierbei werden zudem diverse 
 
 ### Rollenzuordnung
 
-| Name     | Rolle     |
-|----------|-----------|
+| Name              | Rolle             |
+| ----------------- | ----------------- |
 | Thomas Mustermann | Softwarearchitekt |
 
 
