@@ -29,7 +29,7 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 ## Stakeholder
 
 | Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                               | Relevanz    |
-|:--------------|:-------------------------|:--------------------------------|:--------------|:---------------------------------------------|:------------------------------------------------|:------------|
+| :------------ | :----------------------- | :------------------------------ | :------------ | :------------------------------------------- | :---------------------------------------------- | :---------- |
 | Spieler       | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit Freunden online Kartenspiele spielen | Endnutzer   |
 | Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | 24/7          | Vertraut mit Fullstack-Anwendungen           | Koordination                                    | Entscheider |
 
@@ -49,7 +49,7 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 __Mindestanforderungen an den Web Browser für die Web Anwendung__
 
 | Browser           | Version |
-|:------------------|:--------|
+| :---------------- | :------ |
 | Internet Explorer | 11      |
 | Edge              | 15      |
 | Firefox           | 54      |
@@ -60,20 +60,20 @@ __Mindestanforderungen an den Web Browser für die Web Anwendung__
 __Mindestanforderungen an das mobile Endgerät für die App__
 
 | Betriebssystem | Version |
-|:---------------|:--------|
+| :------------- | :------ |
 | iOS            | 8       |
 | Android (ARM)  | 4.1     |
 
 __Mindestanforderungen an den Server für das Backend__
 
 | Programmiersprache | Version |
-|:-------------------|:--------|
+| :----------------- | :------ |
 | Python             | 3.5     |
 
 ### Qualitätsmerkmale
 
 | Qualitätsmerkmal           |      sehr gut      |        gut         |       normal       |   nicht relevant   |
-|:---------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
+| :------------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
 | **Zuverlüssigkeit**        |                    |                    |                    |                    |
 | Fehlertoleranz             |         -          |         -          | :heavy_check_mark: |         -          |
 | Wiederherstellbarkeit      |         -          |         -          |         -          | :heavy_check_mark: |
@@ -109,14 +109,21 @@ __Mindestanforderungen an den Server für das Backend__
 
 ### User Stories
 
-| **Als**  | **möchte ich**              | **so dass**                                                                                           | **Akzeptanz**                |
-|:---------|:----------------------------|:------------------------------------------------------------------------------------------------------|:-----------------------------|
-| Benutzer | Kartenspiele online spielen | ich in meiner Freizeit mit Freunden Kartenspiele spielen kann                                         | Spiel ist spielbar           |
-| Benutzer | eine Lobby erstellen        | ich mit anderen Spieler spielen kann                                                                  | Andere können beitreten      |
-| Benutzer | einer Lobby beitreten       | ich in meiner Freizeit mit Freunden und Fremden Kartenspiele spielen kann                             | Spiel ist spielbar           |
-| Benutzer | meine Lobby einstellen      | ich die Spieleranzahl, Kartenspiel und ob es eine öffentliche oder private Lobby ist, einstellen kann | Lobby erstellen              |
-| Benutzer | Freunde einladen            | ich mit meinen Freunden zusammen spiele können                                                        | Freund kann beitreten        |
-| Benutzer | Andere Spieler entfernen    | ich als Lobby Leiter andere Spieler entfernen kann                                                    | Anderer Spieler ist entfernt |
+| **Als**     | **möchte ich**                                                        | **so dass**                                                         | **Akzeptanz**                                                                               |
+| :---------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------ |
+| Benutzer    | Kartenspiele online spielen                                           | ich mit anderen Benutzern Kartenspiele spielen kann                 | Spiel ist spielbar                                                                          |
+| Benutzer    | eine Lobby erstellen                                                  | ich als Lobbyleiter mit anderen Benutzern spielen kann              | Lobby ist erstellt                                                                          |
+| Lobbyleiter | die maximale Anzahl von Benutzern in einer Lobby einstellen           | festlegen kann mit wie vielen Leuten ich zusammen spiele            | Höchstens die eingestellte Anzahl an Benutzern der Lobby beitreten können                   |
+| Lobbyleiter | die Art des Kartenspiels einstellen                                   | verschiedene Kartenspiele spielen kann                              | Art des Kartenspiels ist eingestellt                                                        |
+| Lobbyleiter | eine Lobby auf öffentlich oder privat schalten                        | ich kontrollieren kann, wer der Lobby beitreten kann                | Lobby auf öffentlich oder privat schaltbar                                                  |
+| Lobbyleiter | einen Freund einladen                                                 | ich mit einem bestimmten Freund zusammen spielen kann               | Freund kann beitreten                                                                       |
+| Lobbyleiter | Benutzer aus der Lobby entfernen                                      | ungewollte Benutzer entfernen kann                                  | Anderer Benutzer ist entfernt                                                               |
+| Lobbyleiter | die Partie starten                                                    | ich ein Kartenspiel spielen kann                                    | Alle Benutzer aus der Lobby sind zusammen in einer Partie                                   |
+| Benutzer    | die Liste aller öffentlichen Lobbys anzeigen                          | ich eine dieser Lobbys auswählen kann                               | Liste aller öffentlichen Lobbys wird angezeigt                                              |
+| Benutzer    | einer öffentlichen Lobby beitreten                                    | ich mit anderen Benutzern zusammen spielen kann                     | Ich bin einer Lobby beigetreten                                                             |
+| Benutzer    | einer Lobby, in die ich eingeladen wurde, beitreten                   | ich zusammen mit anderen Benutzern spielen kann                     | Ich bin einer Lobby beigetreten                                                             |
+| Benutzer    | die aktuelle Partie verlassen                                         | ich aus unbestimmten Gründen früher aussteigen kann                 | Ich habe die aktuelle Partie verlassen                                                      |
+| Benutzer    | nach einer Partie wieder mit den selben Benutzern in einer Lobby sein | ich ggfs. eine weitere Partie mit den selben Benutzern spielen kann | Ich bin nach abgeschlossener Runde mit den Spielern aus der vorherigen Runde in einer Lobby |
 
 # __Technische Beschreibung__
 
@@ -165,7 +172,7 @@ __Mindestanforderungen an den Server für das Backend__
     - Rollendefinition und Zuordnung
 
 | Softwarebaustein | Person(en)        |
-|:-----------------|:------------------|
+| :--------------- | :---------------- |
 | Komponente A     | Thomas Mustermann |
 
 ### Rollen
@@ -189,7 +196,7 @@ Anwendung bereitgestellt.
 ### Rollenzuordnung
 
 | Name              | Rolle             |
-|:------------------|:------------------|
+| :---------------- | :---------------- |
 | Thomas Mustermann | Softwarearchitekt |
 
 
@@ -212,8 +219,9 @@ Anwendung bereitgestellt.
 # __Anhänge__
 
 ## Glossar
-
-    - Definitionen, Abkärzungen, Begriffe
+**Benutzer:** Jede Person ist ein Benutzer  
+**Lobby:** Empfangsraum/Vorhalle (*methaphorisch*) für Spieler  
+**Lobbyleiter:** Ein Lobbyleiter ist ein Benutzer, der eine Lobby erstellt hat. Er ist Leiter dieser Lobby und kann Einstellungen treffen.  
 
 ## Referenzen
 
