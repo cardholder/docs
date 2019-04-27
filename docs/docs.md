@@ -28,10 +28,10 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ## Stakeholder
 
-| Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                               | Relevanz    |
-| :------------ | :----------------------- | :------------------------------ | :------------ | :------------------------------------------- | :---------------------------------------------- | :---------- |
-| Spieler       | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit Freunden online Kartenspiele spielen | Endnutzer   |
-| Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | 24/7          | Vertraut mit Fullstack-Anwendungen           | Koordination                                    | Entscheider |
+| Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                                        | Relevanz    |
+| :------------ | :----------------------- | :------------------------------ | :------------ | :------------------------------------------- | :------------------------------------------------------- | :---------- |
+| Benutzer      | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit anderen Benutzern online Kartenspiele spielen | Endnutzer   |
+| Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | -             | Vertraut mit Fullstack-Anwendungen           | Koordination                                             | Entscheider |
 
 ## Funktionale Anforderungen
 
