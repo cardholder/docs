@@ -35,6 +35,8 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ## Funktionale Anforderungen
 
+![Use-Case Diagramm](./img/ch_usecase.svg "Use-Case Diagramm")
+
     - Use-Case Diagramme
     - Strukturierung der Diagramme in funktionale Gruppen
 
