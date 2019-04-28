@@ -99,7 +99,7 @@ __Mindestanforderungen an den Server für das Backend__
 ## Graphische Benutzerschnittstelle
 
 ### App
-Die GUI-Mockups der mobilen Anwendung sind vorrübergehend [hier](!https://xd.adobe.com/view/b9aff4c3-81df-4940-595e-a1ad0d00664d-cf9e/) zu finden und werden dem Dokument, in der finalen Version, zu einem späteren Zeitpunkt, hinzugefügt.
+Die GUI-Mockups der mobilen Anwendung sind vorrübergehend [hier](https://xd.adobe.com/view/b9aff4c3-81df-4940-595e-a1ad0d00664d-cf9e/) zu finden und werden dem Dokument, in der finalen Version, zu einem späteren Zeitpunkt, hinzugefügt.
 
     - GUI-Mockups passend zu User Stories
     - Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
