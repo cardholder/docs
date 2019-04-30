@@ -144,6 +144,8 @@ Die GUI-Mockups für die Web-Anwendung sind ebenfalls noch nicht fertig und sind
 
 ## Softwarearchitektur
 
+![Softwarearchitektur](./img/architecture/software_architecture.svg "Softwarearchitektur Diagramm")
+
     - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
 ## Schnittstellen
