@@ -136,6 +136,8 @@ Die GUI-Mockups für die Web-Anwendung sind ebenfalls noch nicht fertig und sind
 # __Technische Beschreibung__
 
 ## Systemübersicht
+ 
+![Systemarchitektur](./img/architecture/system_architecture.svg "Systemarchitektur Diagramm")
 
     - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
     - Kommunikationsprotokolle, Datenformate
