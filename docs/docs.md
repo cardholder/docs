@@ -140,6 +140,7 @@ zu betrachten.
 | Benutzer    | einer Lobby, in die ich eingeladen wurde, beitreten                   | ich zusammen mit anderen Benutzern spielen kann                     | Ich bin einer Lobby beigetreten                                                             | Muss          |
 | Benutzer    | die aktuelle Partie verlassen                                         | ich aus unbestimmten Gründen früher aussteigen kann                 | Ich habe die aktuelle Partie verlassen                                                      | Kann          |
 | Benutzer    | nach einer Partie wieder mit den selben Benutzern in einer Lobby sein | ich ggfs. eine weitere Partie mit den selben Benutzern spielen kann | Ich bin nach abgeschlossener Runde mit den Spielern aus der vorherigen Runde in einer Lobby | Kann          |
+| Benutzer    | einen Benutzernamen auswählen können                                  | meine Freunde mich erkennen können                                  | Benutzername wird angezeigt                                                                 | Sollte        |
 
 # __Technische Beschreibung__
 
@@ -158,9 +159,7 @@ zu betrachten.
 
 ## Datenmodell
 
-    - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdom�ne)
-    - Modellierung des physikalischen Datenmodells 
-      - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+![Datenbankdiagramm](./img/database/database_erm.svg "Datenbankdiagramm")
 
 ## Abläufe
 
