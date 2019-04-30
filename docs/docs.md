@@ -147,14 +147,9 @@ zu betrachten.
 
 ![Systemarchitektur](./img/architecture/system_architecture.svg "Systemarchitektur Diagramm")
 
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
-    - Kommunikationsprotokolle, Datenformate
-
 ## Softwarearchitektur
 
 ![Softwarearchitektur](./img/architecture/software_architecture.svg "Softwarearchitektur Diagramm")
-
-    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
 ## Schnittstellen
 
