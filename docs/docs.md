@@ -237,6 +237,7 @@ diverse Datenquellen integriert für die Anwendung bereitgestellt.
   - Nicht-funktionale Anforderungen
   - Zustandsdiagramm
   - Sequenzdiagramm
+  - Kanban-Boards für Bausteine
 
 - __KW 20 (14.5)__
   - Design Umsetzung
