@@ -144,7 +144,7 @@ zu betrachten.
 # __Technische Beschreibung__
 
 ## Systemübersicht
- 
+
 ![Systemarchitektur](./img/architecture/system_architecture.svg "Systemarchitektur Diagramm")
 
     - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
@@ -178,6 +178,13 @@ zu betrachten.
 
 ## Annahmen
 
+| Baustein  | Technologie         | Programmiersprache | Repository                                        |   |
+|:----------|:--------------------|:-------------------|:--------------------------------------------------|:--|
+| App       | Flutter _(1.2.1)_   | _Dart (2.2)_       | [Link](https://github.com/cardholder/app)         |   |
+| Webseite  | React _(16.8)_      | _JavaScript (ES6)_ | [Link](https://github.com/cardholder/website)     |   |
+| Backend   | Django _(2.2)_      | _Python (3.5)_     | [Link](https://github.com/cardholder/server-side) |   |
+| Datenbank | mariaDB _(10.1.38)_ | _MySQL (15.1)_     | [Link](https://github.com/cardholder/server-side) |   |
+
 ## Verantwortlichkeiten
 
 | Softwarebaustein | Person(en)                  |
@@ -189,28 +196,25 @@ zu betrachten.
 
 #### App-Entwickler
 
-Entwickelt eine grafische Benutzeroberfläche für mobile Endgeräte unter
-Verwendung von Flutter.
+Entwickelt eine grafische Benutzeroberfläche für mobile Endgeräte.
 
 
 #### Web-Entwickler
 
-Entwickelt eine grafische Benutzeroberfläche für moderne Browser unter
-der Verwendung von React.
+Entwickelt eine grafische Benutzeroberfläche für moderne Browser.
 
 #### Backend-Entwickler
 
-Implementiert die funktionale Logik der Anwendung mit Django. Hierbei
-werden zudem diverse Datenquellen wie mariaDB integriert für die
-Anwendung bereitgestellt.
+Implementiert die funktionale Logik der Anwendung. Hierbei werden zudem
+diverse Datenquellen integriert für die Anwendung bereitgestellt.
 
 ### Rollenzuordnung
 
-| Name           | Rolle              | Repository                                        |
-|:---------------|:-------------------|:--------------------------------------------------|
-| Marti Stuwe    | App-Entwickler     | [Link](https://github.com/cardholder/app)         |
-| Patrick Reinke | Web-Entwickler     | [Link](https://github.com/cardholder/website)     |
-| Stefan Kröker  | Backend-Entwickler | [Link](https://github.com/cardholder/server-side) |
+| Name           | Rolle              |
+|:---------------|:-------------------|
+| Marti Stuwe    | App-Entwickler     |
+| Patrick Reinke | Web-Entwickler     |
+| Stefan Kröker  | Backend-Entwickler |
 
 
 ## Grober Projektplan
