@@ -210,19 +210,51 @@ Anwendung bereitgestellt.
 
 ## Grober Projektplan
 
-    - Meilensteine
-
 ### Meilensteine
 
-* KW 43 (21.10)
-  * Abgabe Pflichtenheft
-* KW 44 (28.10) / Projekt aufsetzen
-  * Repository Struktur
-* KW 45 (4.11) / Implementierung
-  * Implementierung #3 (Final)
-* KW 48 (18.12) / Abnahmetests
-  * manuelle Abnahmetestss
-  * Pr�sentation / Software-Demo
+- __KW 18 (30.4)__
+  - Beschreibung
+  - Ziele
+  - Stakeholder
+  - Use-Case
+  - Betriebsbedingungen
+  - Qualitätsmerkmale
+
+- __KW 19 (7.5)__
+  - Mockups
+  - Systemarchitekturdiagramm
+  - Softwarearchitekturdiagramm
+  - Datenbank Modell
+  - Nicht-funktionale Anforderungen
+  - Zustandsdiagramm
+  - Sequenzdiagramm
+
+- __KW 20 (14.5)__
+  - Design Umsetzung
+  - Kommunikationsprotokoll
+  - Schnittstellen
+
+- __KW 21 (21.5)__
+  -  Prototyp Fertigstellung
+  -  Kommunikationsprotokoll Einbindung
+
+- __KW 22 (28.5)__
+   - Prototyp finalisieren
+
+- __KW 23 (4.6)__
+  - 33% der Funktionalität, Tests und Dokumentation
+
+- __KW 24 (11.6)__
+  - 66% der Funktionalität, Tests und Dokumentation
+
+- __KW 25 (18.6)__
+  - 100% der Funktionalität, Tests und Dokumentation
+
+- __KW 26 (25.5)__
+  - Fertigstellung der Projekt Präsentation
+
+- __KW 27 (2.7)__
+  - Projekt Präsentation
 
 # __Anhänge__
 
