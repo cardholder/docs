@@ -44,7 +44,8 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ### Rahmenbedingungen
 
-    - Normen, Standards, Protokolle, Hardware, externe Vorgaben
+* Das Spiel ist 24/7 erreichbar.
+* Die Kommunikation findet über Sockets statt.
 
 ### Betriebsbedingungen
 
@@ -146,27 +147,24 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 ## Anforderungen im Detail
 
-    - User Stories mit Akzeptanzkritierien 
-    - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-    - Strukturierung der User Stories in funktionale Gruppen
-
 ### User Stories
 
-| **Als**     | **möchte ich**                                                        | **so dass**                                                         | **Akzeptanz**                                                                               |
-|:------------|:----------------------------------------------------------------------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|
-| Benutzer    | Kartenspiele online spielen                                           | ich mit anderen Benutzern Kartenspiele spielen kann                 | Spiel ist spielbar                                                                          |
-| Benutzer    | eine Lobby erstellen                                                  | ich als Lobbyleiter mit anderen Benutzern spielen kann              | Lobby ist erstellt                                                                          |
-| Lobbyleiter | die maximale Anzahl von Benutzern in einer Lobby einstellen           | festlegen kann mit wie vielen Leuten ich zusammen spiele            | Höchstens die eingestellte Anzahl an Benutzern der Lobby beitreten können                   |
-| Lobbyleiter | die Art des Kartenspiels einstellen                                   | verschiedene Kartenspiele spielen kann                              | Art des Kartenspiels ist eingestellt                                                        |
-| Lobbyleiter | eine Lobby auf öffentlich oder privat schalten                        | ich kontrollieren kann, wer der Lobby beitreten kann                | Lobby auf öffentlich oder privat schaltbar                                                  |
-| Lobbyleiter | einen Freund einladen                                                 | ich mit einem bestimmten Freund zusammen spielen kann               | Freund kann beitreten                                                                       |
-| Lobbyleiter | Benutzer aus der Lobby entfernen                                      | ungewollte Benutzer entfernen kann                                  | Anderer Benutzer ist entfernt                                                               |
-| Lobbyleiter | die Partie starten                                                    | ich ein Kartenspiel spielen kann                                    | Alle Benutzer aus der Lobby sind zusammen in einer Partie                                   |
-| Benutzer    | die Liste aller öffentlichen Lobbys anzeigen                          | ich eine dieser Lobbys auswählen kann                               | Liste aller öffentlichen Lobbys wird angezeigt                                              |
-| Benutzer    | einer öffentlichen Lobby beitreten                                    | ich mit anderen Benutzern zusammen spielen kann                     | Ich bin einer Lobby beigetreten                                                             |
-| Benutzer    | einer Lobby, in die ich eingeladen wurde, beitreten                   | ich zusammen mit anderen Benutzern spielen kann                     | Ich bin einer Lobby beigetreten                                                             |
-| Benutzer    | die aktuelle Partie verlassen                                         | ich aus unbestimmten Gründen früher aussteigen kann                 | Ich habe die aktuelle Partie verlassen                                                      |
-| Benutzer    | nach einer Partie wieder mit den selben Benutzern in einer Lobby sein | ich ggfs. eine weitere Partie mit den selben Benutzern spielen kann | Ich bin nach abgeschlossener Runde mit den Spielern aus der vorherigen Runde in einer Lobby |
+| **Als**     | **möchte ich**                                                        | **so dass**                                                         | **Akzeptanz**                                                                               | **Priorität** |
+|:------------|:----------------------------------------------------------------------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:--------------|
+| Benutzer    | Kartenspiele online spielen                                           | ich mit anderen Benutzern Kartenspiele spielen kann                 | Spiel ist spielbar                                                                          | Muss          |
+| Benutzer    | eine Lobby erstellen                                                  | ich als Lobbyleiter mit anderen Benutzern spielen kann              | Lobby ist erstellt                                                                          | Muss          |
+| Lobbyleiter | die maximale Anzahl von Benutzern in einer Lobby einstellen           | festlegen kann mit wie vielen Leuten ich zusammen spiele            | Höchstens die eingestellte Anzahl an Benutzern der Lobby beitreten können                   | Sollte        |
+| Lobbyleiter | die Art des Kartenspiels einstellen                                   | verschiedene Kartenspiele spielen kann                              | Art des Kartenspiels ist eingestellt                                                        | Sollte        |
+| Lobbyleiter | eine Lobby auf öffentlich oder privat schalten                        | ich kontrollieren kann, wer der Lobby beitreten kann                | Lobby auf öffentlich oder privat schaltbar                                                  | Sollte        |
+| Lobbyleiter | einen Freund einladen                                                 | ich mit einem bestimmten Freund zusammen spielen kann               | Freund kann beitreten                                                                       | Muss          |
+| Lobbyleiter | Benutzer aus der Lobby entfernen                                      | ungewollte Benutzer entfernen kann                                  | Anderer Benutzer ist entfernt                                                               | Sollte        |
+| Lobbyleiter | die Partie starten                                                    | ich ein Kartenspiel spielen kann                                    | Alle Benutzer aus der Lobby sind zusammen in einer Partie                                   | Muss          |
+| Benutzer    | die Liste aller öffentlichen Lobbys anzeigen                          | ich eine dieser Lobbys auswählen kann                               | Liste aller öffentlichen Lobbys wird angezeigt                                              | Sollte        |
+| Benutzer    | einer öffentlichen Lobby beitreten                                    | ich mit anderen Benutzern zusammen spielen kann                     | Ich bin einer Lobby beigetreten                                                             | Sollte        |
+| Benutzer    | einer Lobby, in die ich eingeladen wurde, beitreten                   | ich zusammen mit anderen Benutzern spielen kann                     | Ich bin einer Lobby beigetreten                                                             | Muss          |
+| Benutzer    | die aktuelle Partie verlassen                                         | ich aus unbestimmten Gründen früher aussteigen kann                 | Ich habe die aktuelle Partie verlassen                                                      | Kann          |
+| Benutzer    | nach einer Partie wieder mit den selben Benutzern in einer Lobby sein | ich ggfs. eine weitere Partie mit den selben Benutzern spielen kann | Ich bin nach abgeschlossener Runde mit den Spielern aus der vorherigen Runde in einer Lobby | Kann          |
+| Benutzer    | einen Benutzernamen auswählen können                                  | meine Freunde mich erkennen können                                  | Benutzername wird angezeigt                                                                 | Sollte        |
 
 # __Technische Beschreibung__
 
@@ -174,12 +172,9 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 ![Systemarchitektur](./img/architecture/system_architecture.svg "Systemarchitektur Diagramm")
 
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
-    - Kommunikationsprotokolle, Datenformate
-
 ## Softwarearchitektur
 
-    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
+![Softwarearchitektur](./img/architecture/software_architecture.svg "Softwarearchitektur Diagramm")
 
 ## Schnittstellen
 
@@ -188,9 +183,7 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 ## Datenmodell
 
-    - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdom�ne)
-    - Modellierung des physikalischen Datenmodells 
-      - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+![Datenbankdiagramm](./img/database/database_erm.svg "Datenbankdiagramm")
 
 ## Abläufe
 
