@@ -44,7 +44,8 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ### Rahmenbedingungen
 
-    - Normen, Standards, Protokolle, Hardware, externe Vorgaben
+* Das Spiel ist 24/7 erreichbar.
+* Die Kommunikation findet über Sockets statt.
 
 ### Betriebsbedingungen
 
