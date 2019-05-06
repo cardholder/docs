@@ -119,10 +119,6 @@ zu betrachten.
 
 ## Anforderungen im Detail
 
-    - User Stories mit Akzeptanzkritierien 
-    - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-    - Strukturierung der User Stories in funktionale Gruppen
-
 ### User Stories
 
 | **Als**     | **möchte ich**                                                        | **so dass**                                                         | **Akzeptanz**                                                                               | **Priorität** |
