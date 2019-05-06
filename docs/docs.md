@@ -107,15 +107,42 @@ späteren Zeitpunkt, hinzugefügt.
 
 ### Web-Anwendnung
 
-Die GUI-Mockups für die Web-Anwendung sind ebenfalls noch nicht fertig
-und sind als Prototyp
-[hier](https://xd.adobe.com/view/63e12a07-a012-4216-700c-1e0274695143-15d0/)
-zu betrachten.
+Die GUI-Mockups für die Web-Anwendung sind in 10 Teile aufgeteilt. Diese sind aufgeteilt in
+Spiel, Home, Impressum, Lobby für Besitzer, Lobby für normale Nutzer, Lobby erstellen,
+Lobbyliste, Suche, Eingabe in der Suche und Username Eingabe.
 
-    - GUI-Mockups passend zu User Stories
-    - Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-    - Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-    - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
+__Home__
+![home-web](./img/mockups/website/Home.png)
+
+__Impressum__
+![impressum-web](./img/mockups/website/Impressum.png)
+
+__Username Eingabe__
+![username-web](./img/mockups/website/Username.png)
+
+__Lobbyliste__
+![lobbylist-web](./img/mockups/website/Lobbylist.png)
+
+__Suche Eingabe__
+![suche-eingabe-web](./img/mockups/website/Suche%20Eingabe.png)
+
+__Suche__
+![suche-web](./img/mockups/website/Suche.png)
+
+__Lobby erstellen__
+![lobby-erstellen-web](./img/mockups/website/Lobby%20erstellen.png)
+
+__Lobby für Leiter__
+![lobby-web](./img/mockups/website/Lobby.png)
+
+__Lobby für Nutzer__
+![lobby2-web](./img/mockups/website/Lobby%202.png)
+
+__Spiel__
+![spiel-web](./img/mockups/website/Spiel.png)
+
+Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-700c-1e0274695143-15d0/) erreichbar.
+
 
 ## Anforderungen im Detail
 
@@ -178,12 +205,12 @@ zu betrachten.
 
 ## Annahmen
 
-| Baustein  | Technologie         | Programmiersprache | Repository                                        |   |
-|:----------|:--------------------|:-------------------|:--------------------------------------------------|:--|
-| App       | Flutter _(1.2.1)_   | _Dart (2.2)_       | [Link](https://github.com/cardholder/app)         |   |
-| Webseite  | React _(16.8)_      | _JavaScript (ES6)_ | [Link](https://github.com/cardholder/website)     |   |
-| Backend   | Django _(2.2)_      | _Python (3.5)_     | [Link](https://github.com/cardholder/server-side) |   |
-| Datenbank | mariaDB _(10.1.38)_ | _MySQL (15.1)_     | [Link](https://github.com/cardholder/server-side) |   |
+| Baustein  | Technologie         | Programmiersprache | Repository                                        |
+|:----------|:--------------------|:-------------------|:--------------------------------------------------|
+| App       | Flutter _(1.2.1)_   | _Dart (2.2)_       | [Link](https://github.com/cardholder/app)         |
+| Webseite  | React _(16.8)_      | _JavaScript (ES6)_ | [Link](https://github.com/cardholder/website)     |
+| Backend   | Django _(2.2)_      | _Python (3.5)_     | [Link](https://github.com/cardholder/server-side) |
+| Datenbank | mariaDB _(10.1.38)_ | _MySQL (15.1)_     | [Link](https://github.com/cardholder/server-side) |
 
 ## Verantwortlichkeiten
 
@@ -236,7 +263,6 @@ diverse Datenquellen integriert für die Anwendung bereitgestellt.
   - Datenbank Modell
   - Nicht-funktionale Anforderungen
   - Zustandsdiagramm
-  - Sequenzdiagramm
   - Kanban-Boards für Bausteine
 
 - __KW 20 (14.5)__
