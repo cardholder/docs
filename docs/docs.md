@@ -112,38 +112,42 @@ Die GUI-Mockups für die Web-Anwendung sind in 10 Teile aufgeteilt. Diese sind a
 Spiel, Home, Impressum, Lobby für Besitzer, Lobby für normale Nutzer, Lobby erstellen,
 Lobbyliste, Suche, Eingabe in der Suche und Username Eingabe.
 
-__Home__
+#### Home
 ![home-web](./img/mockups/website/Home.png)
 
-__Impressum__
+#### Impressum
 ![impressum-web](./img/mockups/website/Impressum.png)
 
-__Username Eingabe__
+#### Username Eingabe
 ![username-web](./img/mockups/website/Username.png)
 
-__Lobbyliste__
+#### Lobbyliste
 ![lobbylist-web](./img/mockups/website/Lobbylist.png)
 
-__Suche Eingabe__
+#### Suche Eingabe
 ![suche-eingabe-web](./img/mockups/website/Suche%20Eingabe.png)
 
-__Suche__
+#### Suche
 ![suche-web](./img/mockups/website/Suche.png)
 
-__Lobby erstellen__
+#### Lobby erstellen
 ![lobby-erstellen-web](./img/mockups/website/Lobby%20erstellen.png)
 
-__Lobby für Leiter__
+#### Lobby für Leiter
 ![lobby-web](./img/mockups/website/Lobby.png)
 
-__Lobby für Nutzer__
+#### Lobby für Nutzer
 ![lobby2-web](./img/mockups/website/Lobby%202.png)
 
-__Spiel__
+#### Spiel
 ![spiel-web](./img/mockups/website/Spiel.png)
 
 Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-700c-1e0274695143-15d0/) erreichbar.
 
+
+### Zustandsdiagramm
+
+![zustandsdiagramm](./img/architecture/state_diagram.png)
 
 ## Anforderungen im Detail
 
