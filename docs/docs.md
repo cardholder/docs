@@ -29,7 +29,7 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 ## Stakeholder
 
 | Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                                        | Relevanz    |
-|:--------------|:-------------------------|:--------------------------------|:--------------|:---------------------------------------------|:---------------------------------------------------------|:------------|
+| :------------ | :----------------------- | :------------------------------ | :------------ | :------------------------------------------- | :------------------------------------------------------- | :---------- |
 | Benutzer      | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit anderen Benutzern online Kartenspiele spielen | Endnutzer   |
 | Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | -             | Vertraut mit Fullstack-Anwendungen           | Koordination                                             | Entscheider |
 
@@ -52,7 +52,7 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 __Mindestanforderungen an den Web Browser für die Web Anwendung__
 
 | Browser           | Version |
-|:------------------|:--------|
+| :---------------- | :------ |
 | Internet Explorer | 11      |
 | Edge              | 15      |
 | Firefox           | 54      |
@@ -63,20 +63,20 @@ __Mindestanforderungen an den Web Browser für die Web Anwendung__
 __Mindestanforderungen an das mobile Endgerät für die App__
 
 | Betriebssystem | Version |
-|:---------------|:--------|
+| :------------- | :------ |
 | iOS            | 8       |
 | Android (ARM)  | 4.1     |
 
 __Mindestanforderungen an den Server für das Backend__
 
 | Programmiersprache | Version |
-|:-------------------|:--------|
+| :----------------- | :------ |
 | Python             | 3.5     |
 
 ### Qualitätsmerkmale
 
 | Qualitätsmerkmal           |      sehr gut      |        gut         |       normal       |   nicht relevant   |
-|:---------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
+| :------------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
 | **Zuverlüssigkeit**        |                    |                    |                    |                    |
 | Fehlertoleranz             |         -          |         -          | :heavy_check_mark: |         -          |
 | Wiederherstellbarkeit      |         -          |         -          |         -          | :heavy_check_mark: |
@@ -173,7 +173,7 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ### User Stories
 
 | **Als**     | **möchte ich**                                                        | **so dass**                                                         | **Akzeptanz**                                                                               | **Priorität** |
-|:------------|:----------------------------------------------------------------------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:--------------|
+| :---------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------ | :------------ |
 | Benutzer    | Kartenspiele online spielen                                           | ich mit anderen Benutzern Kartenspiele spielen kann                 | Spiel ist spielbar                                                                          | Muss          |
 | Benutzer    | eine Lobby erstellen                                                  | ich als Lobbyleiter mit anderen Benutzern spielen kann              | Lobby ist erstellt                                                                          | Muss          |
 | Lobbyleiter | die maximale Anzahl von Benutzern in einer Lobby einstellen           | festlegen kann mit wie vielen Leuten ich zusammen spiele            | Höchstens die eingestellte Anzahl an Benutzern der Lobby beitreten können                   | Sollte        |
@@ -201,6 +201,179 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 ## Schnittstellen
 
+### Datentypen
+
+#### Player
+
+| Name | Datentyp | Zusatz                     |
+| ---- | -------- | -------------------------- |
+| id   | Number   |                            |
+| name | String   | 20 alphanumerische Zeichen |
+| role | String   | leader / player            |
+
+```json
+{
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+}
+```
+
+#### Lobby
+
+| Name        | Datentyp | Zusatz                    |
+| ----------- | -------- | ------------------------- |
+| id          | String   | 7 alphanumerische Zeichen |
+| game        | String   | Durak                     |
+| visibility  | String   | public, private           |
+| max_players | Number   | Zahl von 2 - 8            |
+| players     | Player[] |                           |
+
+```json
+// Lobby
+{
+    "id": "hAsfh8n",
+    "game": "Durak",
+    "visibility": "private",
+    "max_players": 8,
+    "players": [
+        {
+            "id": 0,
+            "name": "Player 1",
+            "role": "leader"
+        }
+    ]
+}
+```
+
+
+### Clientnachrichten
+
+#### Hello
+```json
+// hello
+{
+}
+```
+
+#### Create Lobby
+
+| Name        | Datentyp | Zusatz          |
+| ----------- | -------- | --------------- |
+| game        | String   | Durak           |
+| visibility  | String   | public, private |
+| max_players | Number   | Zahl von 2 - 8  |
+
+```json
+// create-lobby
+{
+    "game": "Durak",
+    "visibility": "private",
+    "max_players": 8
+}
+```
+
+#### Join Lobby
+
+| Name     | Datentyp | Zusatz       |
+| -------- | -------- | ------------ |
+| lobby_id | String   | id der Lobby |
+| name     | String   | Benutzername |
+
+```json
+// create-lobby
+{
+    "lobby_id": "Durak",
+    "name": "Player 1",
+}
+```
+
+
+### Servernachrichten
+
+#### Lobbylist
+
+| Name    | Datentyp | Zusatz |
+| ------- | -------- | ------ |
+| lobbies | Lobby[]  |        |
+
+```json
+// lobbylist
+{
+    "lobbies": [
+        {
+            "id": "hAsfh8n",
+            "game": "Durak",
+            "visibility": "private",
+            "max_players": 8,
+            "players": [
+                {
+                    "id": 0,
+                    "name": "Player 1",
+                    "role": "leader"
+                }
+            ]
+        }
+    ],
+}
+```
+
+#### Lobbylist Entry
+
+| Name  | Datentyp | Zusatz |
+| ----- | -------- | ------ |
+| lobby | Lobby    |        |
+
+```json
+// lobbylist-entry
+{
+    "lobby": {
+        "id": "hAsfh8n",
+        "game": "Durak",
+        "visibility": "private",
+        "max_players": 8,
+        "players": [
+            {
+                "id": 0,
+                "name": "Player 1",
+                "role": "leader"
+            }
+        ]
+    }
+}
+```
+
+
+#### Remove Lobbylist Entry
+
+| Name     | Datentyp | Zusatz         |
+| -------- | -------- | -------------- |
+| lobby_id | String   | id einer Lobby |
+
+```json
+// lobbylist-entry
+{
+    "lobby_id": "hAsfh8n"
+}
+```
+
+#### Lobby created
+
+| Name | Datentyp | Zusatz                  |
+| ---- | -------- | ----------------------- |
+| id   | String   | id der erstellten Lobby |
+
+```json
+// create-lobby
+{
+    "id": "hAsfh8n"
+}
+```
+
+
+
+
+
     - Schnittstellenbeschreibung
     - Auflistung der nach außen sichtbaren Schnittstelle der Softwarebausteine
 
@@ -222,7 +395,7 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ## Annahmen
 
 | Baustein  | Technologie         | Programmiersprache | Repository                                        |
-|:----------|:--------------------|:-------------------|:--------------------------------------------------|
+| :-------- | :------------------ | :----------------- | :------------------------------------------------ |
 | App       | Flutter _(1.2.1)_   | _Dart (2.2)_       | [Link](https://github.com/cardholder/app)         |
 | Webseite  | React _(16.8)_      | _JavaScript (ES6)_ | [Link](https://github.com/cardholder/website)     |
 | Backend   | Django _(2.2)_      | _Python (3.5)_     | [Link](https://github.com/cardholder/server-side) |
@@ -231,7 +404,7 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ## Verantwortlichkeiten
 
 | Softwarebaustein | Person(en)                  |
-|:-----------------|:----------------------------|
+| :--------------- | :-------------------------- |
 | Frontend         | Marti Stuwe, Patrick Reinke |
 | Backend          | Stefan Kröker               |
 
@@ -254,7 +427,7 @@ diverse Datenquellen integriert für die Anwendung bereitgestellt.
 ### Rollenzuordnung
 
 | Name           | Rolle              |
-|:---------------|:-------------------|
+| :------------- | :----------------- |
 | Marti Stuwe    | App-Entwickler     |
 | Patrick Reinke | Web-Entwickler     |
 | Stefan Kröker  | Backend-Entwickler |
