@@ -101,10 +101,29 @@ __Mindestanforderungen an den Server für das Backend__
 
 ### App
 
-Die GUI-Mockups der mobilen Anwendung sind vorrübergehend
-[hier](https://xd.adobe.com/view/b9aff4c3-81df-4940-595e-a1ad0d00664d-cf9e/)
-zu finden und werden dem Dokument, in der finalen Version, zu einem
-späteren Zeitpunkt, hinzugefügt.
+#### Ladebildschirm
+![loading](./img/mockups/app/Load.png)
+
+#### Hauptmenü
+![home](./img/mockups/app/Home.png)
+
+#### Anzeigename eingeben
+![set-name](./img/mockups/app/SetName.png)
+
+#### Lobbyliste
+![lobbylist](./img/mockups/app/Lobbylist.png)
+
+#### Lobby erstellen
+![create-lobby](./img/mockups/app/CreateLobby.png)
+
+#### Lobby
+![lobby](./img/mockups/app/Lobby.png)
+
+#### Im Spiel
+![ingame](./img/mockups/app/Ingame.png)
+
+Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/b9aff4c3-81df-4940-595e-a1ad0d00664d-cf9e/) erreichbar.
+
 
 ### Web-Anwendnung
 
