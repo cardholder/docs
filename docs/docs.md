@@ -396,7 +396,7 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 | Baustein  | Technologie         | Programmiersprache | Repository                                        |
 | :-------- | :------------------ | :----------------- | :------------------------------------------------ |
-| App       | Flutter _(1.2.1)_   | _Dart (2.2)_       | [Link](https://github.com/cardholder/app)         |
+| App       | Flutter _(1.5.4)_   | _Dart (2.3)_       | [Link](https://github.com/cardholder/app)         |
 | Webseite  | React _(16.8)_      | _JavaScript (ES6)_ | [Link](https://github.com/cardholder/website)     |
 | Backend   | Django _(2.2)_      | _Python (3.5)_     | [Link](https://github.com/cardholder/server-side) |
 | Datenbank | mariaDB _(10.1.38)_ | _MySQL (15.1)_     | [Link](https://github.com/cardholder/server-side) |
