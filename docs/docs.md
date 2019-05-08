@@ -77,7 +77,7 @@ __Mindestanforderungen an den Server für das Backend__
 
 | Qualitätsmerkmal           |      sehr gut      |        gut         |       normal       |   nicht relevant   |
 | :------------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
-| **Zuverlüssigkeit**        |                    |                    |                    |                    |
+| **Zuverlässigkeit**        |                    |                    |                    |                    |
 | Fehlertoleranz             |         -          |         -          | :heavy_check_mark: |         -          |
 | Wiederherstellbarkeit      |         -          |         -          |         -          | :heavy_check_mark: |
 | Ordnungsmäßigkeit          |         -          |         -          |         -          | :heavy_check_mark: |
@@ -249,7 +249,7 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 ### Clientnachrichten
 
-Client verbindet sich mit dem Server
+Client verbindet sich mit dem Server.
 
 #### Hello
 ```json
@@ -260,7 +260,7 @@ Client verbindet sich mit dem Server
 
 #### Create Lobby
 
-Nachricht um dem Server die Daten der erstellten Lobby zu schicken.
+Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 
 | Name        | Datentyp | Zusatz          |
 | ----------- | -------- | --------------- |
@@ -279,7 +279,7 @@ Nachricht um dem Server die Daten der erstellten Lobby zu schicken.
 
 #### Join Lobby
 
-Der Client schickt diese Nachricht an den Server wenn er eine Lobby beitritt.
+Wenn ein Client einer Lobby beitrit, schickt er diese Nachricht an den Server.
 
 | Name     | Datentyp | Zusatz       |
 | -------- | -------- | ------------ |
@@ -299,7 +299,7 @@ Der Client schickt diese Nachricht an den Server wenn er eine Lobby beitritt.
 
 #### Lobbylist
 
-Diese Nachricht wird zum Client geschickt, welche die Lobbyliste aufruft.
+Wird dem Client geschickt um die Liste aller Lobbys anzuzeigen. Antwort auf *[hello](#hello)*.
 
 | Name    | Datentyp | Zusatz |
 | ------- | -------- | ------ |
@@ -328,7 +328,7 @@ Diese Nachricht wird zum Client geschickt, welche die Lobbyliste aufruft.
 
 #### Lobbylist Entry
 
-Diese Nachricht wird geschickt, wenn eine neue Lobby erstellt oder eine Aktualisierung statt gefunden hat.
+Diese Nachricht wird allen Clients geschickt, wenn eine neue Lobby erstellt wurde oder eine Aktualisierung stattgefunden hat.
 
 | Name  | Datentyp | Zusatz |
 | ----- | -------- | ------ |
@@ -356,7 +356,7 @@ Diese Nachricht wird geschickt, wenn eine neue Lobby erstellt oder eine Aktualis
 
 #### Remove Lobbylist Entry
 
-Diese Nachricht wird zu allen Clients geschickt, wenn die Lobby gelöscht wird.
+Diese Nachricht wird allen Clients geschickt, wenn die Lobby gelöscht wird.
 
 | Name     | Datentyp | Zusatz         |
 | -------- | -------- | -------------- |
@@ -371,7 +371,7 @@ Diese Nachricht wird zu allen Clients geschickt, wenn die Lobby gelöscht wird.
 
 #### Lobby created
 
-Diese Nachricht wird zum User geschickt, welche die Lobby erstellt hat.
+Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
 
 | Name | Datentyp | Zusatz                  |
 | ---- | -------- | ----------------------- |
@@ -450,8 +450,7 @@ Entwickelt eine grafische Benutzeroberfläche für moderne Browser.
 
 #### Backend-Entwickler
 
-Implementiert die funktionale Logik der Anwendung. Hierbei werden zudem
-diverse Datenquellen integriert für die Anwendung bereitgestellt.
+Implementiert die funktionale Logik der Anwendung. Hierbei werden zudem diverse Datenquellen integriert und für die Anwendung bereitgestellt.
 
 ### Rollenzuordnung
 
@@ -524,4 +523,3 @@ erstellt hat. Er ist Leiter dieser Lobby und kann Einstellungen treffen.
     - Handbücher, Gesetze
 
 ## Index
-
