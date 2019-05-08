@@ -279,7 +279,7 @@ Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 
 #### Join Lobby
 
-Wenn ein Client einer Lobby beitrit, schickt er diese Nachricht an den Server.
+Wenn ein Client einer Lobby beitritt, schickt er diese Nachricht an den Server.
 
 | Name     | Datentyp | Zusatz       |
 | -------- | -------- | ------------ |
