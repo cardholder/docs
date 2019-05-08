@@ -249,6 +249,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 ### Clientnachrichten
 
+Client verbindet sich mit dem Server
+
 #### Hello
 ```json
 // hello
@@ -257,6 +259,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ```
 
 #### Create Lobby
+
+Nachricht um dem Server die Daten der erstellten Lobby zu schicken.
 
 | Name        | Datentyp | Zusatz          |
 | ----------- | -------- | --------------- |
@@ -275,6 +279,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 #### Join Lobby
 
+Der Client schickt diese Nachricht an den Server wenn er eine Lobby beitritt.
+
 | Name     | Datentyp | Zusatz       |
 | -------- | -------- | ------------ |
 | lobby_id | String   | id der Lobby |
@@ -292,6 +298,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ### Servernachrichten
 
 #### Lobbylist
+
+Diese Nachricht wird zum Client geschickt, welche die Lobbyliste aufruft.
 
 | Name    | Datentyp | Zusatz |
 | ------- | -------- | ------ |
@@ -320,6 +328,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 #### Lobbylist Entry
 
+Diese Nachricht wird geschickt, wenn eine neue Lobby erstellt oder eine Aktualisierung statt gefunden hat.
+
 | Name  | Datentyp | Zusatz |
 | ----- | -------- | ------ |
 | lobby | Lobby    |        |
@@ -346,6 +356,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 #### Remove Lobbylist Entry
 
+Diese Nachricht wird zu allen Clients geschickt, wenn die Lobby gelöscht wird.
+
 | Name     | Datentyp | Zusatz         |
 | -------- | -------- | -------------- |
 | lobby_id | String   | id einer Lobby |
@@ -359,6 +371,8 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 
 #### Lobby created
 
+Diese Nachricht wird zum User geschickt, welche die Lobby erstellt hat.
+
 | Name | Datentyp | Zusatz                  |
 | ---- | -------- | ----------------------- |
 | id   | String   | id der erstellten Lobby |
@@ -371,9 +385,6 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ```
 
 
-
-
-
     - Schnittstellenbeschreibung
     - Auflistung der nach außen sichtbaren Schnittstelle der Softwarebausteine
 
@@ -382,6 +393,24 @@ Der Prototyp ist weiterhin [hier](https://xd.adobe.com/view/63e12a07-a012-4216-7
 ![Datenbankdiagramm](./img/database/database_erm.svg "Datenbankdiagramm")
 
 ## Abläufe
+
+### Sequenzdiagramme
+
+#### Spiel öffnen
+
+![Spiel oeffnen](./img/sequence_diagram/open_game.svg "Sequenzdiagramm Spiel Öffnen")
+
+#### Lobby beitreten
+
+![Lobby beitreten](./img/sequence_diagram/join_lobby.svg "Sequenzdiagramm Lobby beitreten")
+
+#### Lobby erstellen
+
+![Lobby erstellen](./img/sequence_diagram/create_lobby.svg "Sequenzdiagramm Lobby erstellen")
+
+#### Lobby verlassen
+
+![Lobby verlassen](./img/sequence_diagram/leave_lobby.svg "Sequenzdiagramm Lobby verlassen")
 
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
