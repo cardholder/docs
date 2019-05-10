@@ -1,4 +1,4 @@
-# __Einführung__
+# **Einführung**
 
 ## Beschreibung
 
@@ -24,12 +24,12 @@ erforderlich.
 Bei Cardholder ist es nicht möglich eigene Kartenspiele hinzuzufügen.
 Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
-# __Anforderungen__
+# **Anforderungen**
 
 ## Stakeholder
 
 | Funktion      | Name                     | Kontakt                         | Verfügbarkeit | Wissen                                       | Interesse & Ziele                                        | Relevanz    |
-|:--------------|:-------------------------|:--------------------------------|:--------------|:---------------------------------------------|:---------------------------------------------------------|:------------|
+| :------------ | :----------------------- | :------------------------------ | :------------ | :------------------------------------------- | :------------------------------------------------------- | :---------- |
 | Benutzer      | -                        | -                               | -             | Kennt die Regeln der jeweiligen Kartenspiele | Möchte mit anderen Benutzern online Kartenspiele spielen | Endnutzer   |
 | Product-Owner | Prof. Dr. Jörg Brunsmann | joerg.brunsmann@fh-bielefeld.de | -             | Vertraut mit Fullstack-Anwendungen           | Koordination                                             | Entscheider |
 
@@ -44,15 +44,15 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ### Rahmenbedingungen
 
-* Das Spiel ist 24/7 erreichbar.
-* Die Kommunikation findet über Sockets statt.
+- Das Spiel ist 24/7 erreichbar.
+- Die Kommunikation findet über Sockets statt.
 
 ### Betriebsbedingungen
 
-__Mindestanforderungen an den Web Browser für die Web Anwendung__
+**Mindestanforderungen an den Web Browser für die Web Anwendung**
 
 | Browser           | Version |
-|:------------------|:--------|
+| :---------------- | :------ |
 | Internet Explorer | 11      |
 | Edge              | 15      |
 | Firefox           | 54      |
@@ -60,23 +60,23 @@ __Mindestanforderungen an den Web Browser für die Web Anwendung__
 | Safari            | 10      |
 | Opera             | 38      |
 
-__Mindestanforderungen an das mobile Endgerät für die App__
+**Mindestanforderungen an das mobile Endgerät für die App**
 
 | Betriebssystem | Version |
-|:---------------|:--------|
+| :------------- | :------ |
 | iOS            | 8       |
 | Android (ARM)  | 4.1     |
 
-__Mindestanforderungen an den Server für das Backend__
+**Mindestanforderungen an den Server für das Backend**
 
 | Programmiersprache | Version |
-|:-------------------|:--------|
+| :----------------- | :------ |
 | Python             | 3.5     |
 
 ### Qualitätsmerkmale
 
 | Qualitätsmerkmal           |      sehr gut      |        gut         |       normal       |   nicht relevant   |
-|:---------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
+| :------------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
 | **Zuverlässigkeit**        |                    |                    |                    |                    |
 | Fehlertoleranz             |         -          |         -          | :heavy_check_mark: |         -          |
 | Wiederherstellbarkeit      |         -          |         -          |         -          | :heavy_check_mark: |
@@ -133,7 +133,6 @@ Der Prototyp ist weiterhin
 [hier](https://xd.adobe.com/view/b9aff4c3-81df-4940-595e-a1ad0d00664d-cf9e/)
 erreichbar.
 
-
 ### Web-Anwendnung
 
 Die GUI-Mockups für die Web-Anwendung sind in 10 Teile aufgeteilt. Diese
@@ -185,7 +184,6 @@ Der Prototyp ist weiterhin
 [hier](https://xd.adobe.com/view/63e12a07-a012-4216-700c-1e0274695143-15d0/)
 erreichbar.
 
-
 ### Zustandsdiagramm
 
 ![zustandsdiagramm](./img/architecture/state_diagram.png)
@@ -195,7 +193,7 @@ erreichbar.
 ### User Stories
 
 | **Als**     | **möchte ich**                                                        | **so dass**                                                         | **Akzeptanz**                                                                               | **Priorität** |
-|:------------|:----------------------------------------------------------------------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:--------------|
+| :---------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------ | :------------ |
 | Benutzer    | Kartenspiele online spielen                                           | ich mit anderen Benutzern Kartenspiele spielen kann                 | Spiel ist spielbar                                                                          | Muss          |
 | Benutzer    | eine Lobby erstellen                                                  | ich als Lobbyleiter mit anderen Benutzern spielen kann              | Lobby ist erstellt                                                                          | Muss          |
 | Lobbyleiter | die maximale Anzahl von Benutzern in einer Lobby einstellen           | festlegen kann mit wie vielen Leuten ich zusammen spiele            | Höchstens die eingestellte Anzahl an Benutzern der Lobby beitreten können                   | Sollte        |
@@ -211,7 +209,7 @@ erreichbar.
 | Benutzer    | nach einer Partie wieder mit den selben Benutzern in einer Lobby sein | ich ggfs. eine weitere Partie mit den selben Benutzern spielen kann | Ich bin nach abgeschlossener Runde mit den Spielern aus der vorherigen Runde in einer Lobby | Kann          |
 | Benutzer    | einen Benutzernamen auswählen können                                  | meine Freunde mich erkennen können                                  | Benutzername wird angezeigt                                                                 | Sollte        |
 
-# __Technische Beschreibung__
+# **Technische Beschreibung**
 
 ## Systemübersicht
 
@@ -228,60 +226,58 @@ erreichbar.
 #### Player
 
 | Name | Datentyp | Zusatz                     |
-|:-----|:---------|:---------------------------|
+| :--- | :------- | :------------------------- |
 | id   | Number   |                            |
 | name | String   | 20 alphanumerische Zeichen |
 | role | String   | leader / player            |
 
 ```json
 {
-    "id": 0,
-    "name": "Player 1",
-    "role": "leader"
+  "id": 0,
+  "name": "Player 1",
+  "role": "leader"
 }
 ```
 
 #### Lobby
 
 | Name        | Datentyp | Zusatz                    |
-|:------------|:---------|:--------------------------|
+| :---------- | :------- | :------------------------ |
 | id          | String   | 7 alphanumerische Zeichen |
 | game        | String   | Durak                     |
 | visibility  | String   | public, private           |
 | max_players | Number   | Zahl von 2 - 8            |
 | players     | Player[] |                           |
 
-
 ```json
 {
-    "id": "hAsfh8n",
-    "game": "Durak",
-    "visibility": "private",
-    "max_players": 8,
-    "players": [
-        {
-            "id": 0,
-            "name": "Player 1",
-            "role": "leader"
-        }
-    ]
+  "id": "hAsfh8n",
+  "game": "Durak",
+  "visibility": "private",
+  "max_players": 8,
+  "players": [
+    {
+      "id": 0,
+      "name": "Player 1",
+      "role": "leader"
+    }
+  ]
 }
 ```
 
 #### Card
 
 | Name  | Datentyp | Zusatz |
-|:------|:---------|:-------|
+| :---- | :------- | :----- |
 | id    | Number   |        |
 | value | String   |        |
 | color | String   |        |
 
-
 ```json
 {
-    "id": 1,
-    "value": "Q",
-    "color": "diamonds"
+  "id": 1,
+  "value": "Q",
+  "color": "diamonds"
 }
 ```
 
@@ -294,8 +290,7 @@ erreichbar.
 Client verbindet sich mit dem Server.
 
 ```json
-{
-}
+{}
 ```
 
 ##### Create Lobby
@@ -303,16 +298,16 @@ Client verbindet sich mit dem Server.
 Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 
 | Name        | Datentyp | Zusatz          |
-|:------------|:---------|:----------------|
+| :---------- | :------- | :-------------- |
 | game        | String   | Durak           |
 | visibility  | String   | public, private |
 | max_players | Number   | Zahl von 2 - 8  |
 
 ```json
 {
-    "game": "Durak",
-    "visibility": "private",
-    "max_players": 8
+  "game": "Durak",
+  "visibility": "private",
+  "max_players": 8
 }
 ```
 
@@ -321,29 +316,29 @@ Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 ##### Lobbylist
 
 Wird dem Client geschickt um die Liste aller Lobbys anzuzeigen. Antwort
-auf *[hello](#hello)*.
+auf _[hello](#hello)_.
 
 | Name    | Datentyp | Zusatz |
-|:--------|:---------|:-------|
+| :------ | :------- | :----- |
 | lobbies | Lobby[]  |        |
 
 ```json
 {
-    "lobbies": [
+  "lobbies": [
+    {
+      "id": "hAsfh8n",
+      "game": "Durak",
+      "visibility": "private",
+      "max_players": 8,
+      "players": [
         {
-            "id": "hAsfh8n",
-            "game": "Durak",
-            "visibility": "private",
-            "max_players": 8,
-            "players": [
-                {
-                    "id": 0,
-                    "name": "Player 1",
-                    "role": "leader"
-                }
-            ]
+          "id": 0,
+          "name": "Player 1",
+          "role": "leader"
         }
-    ],
+      ]
+    }
+  ]
 }
 ```
 
@@ -353,27 +348,26 @@ Diese Nachricht wird allen Clients geschickt, wenn eine neue Lobby
 erstellt wurde oder eine Aktualisierung stattgefunden hat.
 
 | Name  | Datentyp | Zusatz |
-|:------|:---------|:-------|
+| :---- | :------- | :----- |
 | lobby | Lobby    |        |
 
 ```json
 {
-    "lobby": {
-        "id": "hAsfh8n",
-        "game": "Durak",
-        "visibility": "private",
-        "max_players": 8,
-        "players": [
-            {
-                "id": 0,
-                "name": "Player 1",
-                "role": "leader"
-            }
-        ]
-    }
+  "lobby": {
+    "id": "hAsfh8n",
+    "game": "Durak",
+    "visibility": "private",
+    "max_players": 8,
+    "players": [
+      {
+        "id": 0,
+        "name": "Player 1",
+        "role": "leader"
+      }
+    ]
+  }
 }
 ```
-
 
 ##### Remove Lobbylist Entry
 
@@ -381,12 +375,12 @@ Diese Nachricht wird allen Clients geschickt, wenn die Lobby gelöscht
 wird.
 
 | Name     | Datentyp | Zusatz         |
-|:---------|:---------|:---------------|
+| :------- | :------- | :------------- |
 | lobby_id | String   | id einer Lobby |
 
 ```json
 {
-    "lobby_id": "hAsfh8n"
+  "lobby_id": "hAsfh8n"
 }
 ```
 
@@ -395,12 +389,12 @@ wird.
 Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
 
 | Name | Datentyp | Zusatz                  |
-|:-----|:---------|:------------------------|
+| :--- | :------- | :---------------------- |
 | id   | String   | id der erstellten Lobby |
 
 ```json
 {
-    "id": "hAsfh8n"
+  "id": "hAsfh8n"
 }
 ```
 
@@ -414,14 +408,14 @@ Wenn ein Client einer Lobby beitritt, schickt er diese Nachricht an den
 Server.
 
 | Name     | Datentyp | Zusatz       |
-|:---------|:---------|:-------------|
+| :------- | :------- | :----------- |
 | lobby_id | String   | id der Lobby |
 | name     | String   | Benutzername |
 
 ```json
 {
-    "lobby_id": "Durak",
-    "name": "Player 1"
+  "lobby_id": "Durak",
+  "name": "Player 1"
 }
 ```
 
@@ -431,8 +425,7 @@ Wenn der Lobby Leader die Lobby startet, schickt er diese Nachricht an
 den Server.
 
 ```json
-{
-}
+{}
 ```
 
 ##### Mau Mau
@@ -442,22 +435,22 @@ den Server.
 Ein Spieler legt eine Karte ab.
 
 | Name   | Datentyp | Zusatz |
-|:-------|:---------|:-------|
-| card   | Card             ||
+| :----- | :------- | :----- |
+| card   | Card     |        |
 | player | Player   |        |
 
 ```json
 {
-    "card": {
-        "id": 1,
-        "value": "Q",
-        "color": "diamonds"
-    },
-    "player": {
-        "id": 0,
-        "name": "Player 1",
-        "role": "leader"
-    }
+  "card": {
+    "id": 1,
+    "value": "Q",
+    "color": "diamonds"
+  },
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
 }
 ```
 
@@ -466,19 +459,18 @@ Ein Spieler legt eine Karte ab.
 Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 | Name   | Datentyp | Zusatz |
-|:-------|:---------|:-------|
+| :----- | :------- | :----- |
 | player | Player   |        |
 
 ```json
 {
-    "player": {
-        "id": 0,
-        "name": "Player 1",
-        "role": "leader"
-    }
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
 }
 ```
-
 
 #### Servernachrichten
 
@@ -488,21 +480,20 @@ Wenn ein Player die Lobby verlässt oder betritt, schickt der Server
 diese Nachricht alle Clients.
 
 | Name    | Datentyp | Zusatz |
-|:--------|:---------|:-------|
+| :------ | :------- | :----- |
 | players | Player[] |        |
 
 ```json
 {
-    "players": [
-        {
-            "id": 0,
-            "name": "Player 1",
-            "role": "leader"
-        }
-    ]
+  "players": [
+    {
+      "id": 0,
+      "name": "Player 1",
+      "role": "leader"
+    }
+  ]
 }
 ```
-
 
 ##### Mau Mau
 
@@ -511,18 +502,18 @@ diese Nachricht alle Clients.
 Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 | Name  | Datentyp | Zusatz |
-|:------|:---------|:-------|
+| :---- | :------- | :----- |
 | cards | Card[]   |        |
 
 ```json
 {
-    "cards": [
-        {
-             "id": 1,
-             "value": "Q",
-             "color": "diamonds"
-         }
-     ]
+  "cards": [
+    {
+      "id": 1,
+      "value": "Q",
+      "color": "diamonds"
+    }
+  ]
 }
 ```
 
@@ -531,20 +522,20 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
 | Name           | Datentyp | Zusatz |
-|:---------------|:---------|:-------|
+| :------------- | :------- | :----- |
 | player         | Player   |        |
 | cardAmount     | Number   |        |
 | remainingCards | Number   |        |
 
 ```json
 {
-    "player": {
-        "id": 0,
-        "name": "Player 1",
-        "role": "leader"
-    },
-    "cardAmount": 2,
-    "remainingCards": 16
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  },
+  "cardAmount": 2,
+  "remainingCards": 16
 }
 ```
 
@@ -553,22 +544,22 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 
 | Name   | Datentyp | Zusatz |
-|:-------|:---------|:-------|
+| :----- | :------- | :----- |
 | player | Player   |        |
 | card   | Card     |        |
 
 ```json
 {
-    "player": {
-        "id": 0,
-        "name": "Player 1",
-        "role": "leader"
-    },
-    "card": {
-         "id": 1,
-         "value": "Q",
-         "color": "diamonds"
-     }
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  },
+  "card": {
+    "id": 1,
+    "value": "Q",
+    "color": "diamonds"
+  }
 }
 ```
 
@@ -577,16 +568,16 @@ Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 
 | Name   | Datentyp | Zusatz |
-|:-------|:---------|:-------|
+| :----- | :------- | :----- |
 | player | Player   |        |
 
 ```json
 {
-    "player": {
-        "id": 0,
-        "name": "Player 1",
-        "role": "leader"
-    }
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
 }
 ```
 
@@ -595,12 +586,12 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 Spieler macht etwas unerlaubtes.
 
 | Name    | Datentyp | Zusatz |
-|:--------|:---------|:-------|
+| :------ | :------- | :----- |
 | message | String   |        |
 
 ```json
 {
-    "message": "error message"
+  "message": "error message"
 }
 ```
 
@@ -638,12 +629,12 @@ Spieler macht etwas unerlaubtes.
 
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
 
-# __Projektorganisation__
+# **Projektorganisation**
 
 ## Annahmen
 
 | Baustein  | Technologie         | Programmiersprache | Repository                                        |
-|:----------|:--------------------|:-------------------|:--------------------------------------------------|
+| :-------- | :------------------ | :----------------- | :------------------------------------------------ |
 | App       | Flutter _(1.5.4)_   | _Dart (2.3)_       | [Link](https://github.com/cardholder/app)         |
 | Webseite  | React _(16.8)_      | _JavaScript (ES6)_ | [Link](https://github.com/cardholder/website)     |
 | Backend   | Django _(2.2)_      | _Python (3.5)_     | [Link](https://github.com/cardholder/server-side) |
@@ -652,7 +643,7 @@ Spieler macht etwas unerlaubtes.
 ## Verantwortlichkeiten
 
 | Softwarebaustein | Person(en)                  |
-|:-----------------|:----------------------------|
+| :--------------- | :-------------------------- |
 | Frontend         | Marti Stuwe, Patrick Reinke |
 | Backend          | Stefan Kröker               |
 
@@ -661,7 +652,6 @@ Spieler macht etwas unerlaubtes.
 #### App-Entwickler
 
 Entwickelt eine grafische Benutzeroberfläche für mobile Endgeräte.
-
 
 #### Web-Entwickler
 
@@ -675,17 +665,17 @@ diverse Datenquellen integriert und für die Anwendung bereitgestellt.
 ### Rollenzuordnung
 
 | Name           | Rolle              |
-|:---------------|:-------------------|
+| :------------- | :----------------- |
 | Marti Stuwe    | App-Entwickler     |
 | Patrick Reinke | Web-Entwickler     |
 | Stefan Kröker  | Backend-Entwickler |
-
 
 ## Grober Projektplan
 
 ### Meilensteine
 
-- __KW 18 (30.4)__
+- **KW 18 (30.4)**
+
   - Beschreibung
   - Ziele
   - Stakeholder
@@ -693,7 +683,8 @@ diverse Datenquellen integriert und für die Anwendung bereitgestellt.
   - Betriebsbedingungen
   - Qualitätsmerkmale
 
-- __KW 19 (7.5)__
+- **KW 19 (7.5)**
+
   - Mockups
   - Systemarchitekturdiagramm
   - Softwarearchitekturdiagramm
@@ -702,39 +693,46 @@ diverse Datenquellen integriert und für die Anwendung bereitgestellt.
   - Zustandsdiagramm
   - Kanban-Boards für Bausteine
 
-- __KW 20 (14.5)__
+- **KW 20 (14.5)**
+
   - Design Umsetzung
   - Kommunikationsprotokoll
   - Schnittstellen
 
-- __KW 21 (21.5)__
-  -  Prototyp Fertigstellung
-  -  Kommunikationsprotokoll Einbindung
+- **KW 21 (21.5)**
 
-- __KW 22 (28.5)__
+  - Prototyp Fertigstellung
+  - Kommunikationsprotokoll Einbindung
+
+- **KW 22 (28.5)**
+
   - Prototyp finalisieren
 
-- __KW 23 (4.6)__
+- **KW 23 (4.6)**
+
   - 33% der Funktionalität, Tests und Dokumentation
 
-- __KW 24 (11.6)__
+- **KW 24 (11.6)**
+
   - 66% der Funktionalität, Tests und Dokumentation
 
-- __KW 25 (18.6)__
+- **KW 25 (18.6)**
+
   - 100% der Funktionalität, Tests und Dokumentation
 
-- __KW 26 (25.5)__
+- **KW 26 (25.5)**
+
   - Fertigstellung der Projekt Präsentation
 
-- __KW 27 (2.7)__
+- **KW 27 (2.7)**
   - Projekt Präsentation
 
-# __Anhänge__
+# **Anhänge**
 
 ## Glossar
 
 **Benutzer:** Jede Person ist ein Benutzer  
-**Lobby:** Empfangsraum/Vorhalle (*methaphorisch*) für Spieler  
+**Lobby:** Empfangsraum/Vorhalle (_methaphorisch_) für Spieler  
 **Lobbyleiter:** Ein Lobbyleiter ist ein Benutzer, der eine Lobby
 erstellt hat. Er ist Leiter dieser Lobby und kann Einstellungen treffen.
 
@@ -743,4 +741,3 @@ erstellt hat. Er ist Leiter dieser Lobby und kann Einstellungen treffen.
     - Handbücher, Gesetze
 
 ## Index
-
