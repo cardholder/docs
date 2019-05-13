@@ -474,6 +474,14 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 #### Servernachrichten
 
+##### Start Game
+
+Der Server schickt diese Nachricht an die Clients, damit diese das Spiel laden.
+
+```json
+{}
+```
+
 ##### Update Lobby
 
 Wenn ein Player die Lobby verlässt oder betritt, schickt der Server
@@ -622,8 +630,18 @@ Spieler macht etwas unerlaubtes.
 
 ![Lobby verlassen](./img/sequence_diagram/leave_lobby.svg "Sequenzdiagramm Lobby verlassen")
 
-    - Aktivitätsdiagramme für relevante Use Cases
-    - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+#### Spiel starten
+
+![Spiel starten](./img/sequence_diagram/start_game.svg "Sequenzdiagramm Spiel starten")
+
+#### Karte legen
+
+![Karte legen](./img/sequence_diagram/client_plays_card.svg "Sequenzdiagramm Karte legen")
+
+#### Karte ziehen
+
+![Karte ziehen](./img/sequence_diagram/client_draws.svg "Sequenzdiagramm Karte ziehen")
+
 
 ## Entwurf
 
