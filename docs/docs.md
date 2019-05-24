@@ -293,24 +293,6 @@ Client verbindet sich mit dem Server.
 {}
 ```
 
-##### Create Lobby
-
-Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
-
-| Name        | Datentyp | Zusatz          |
-| :---------- | :------- | :-------------- |
-| game        | String   | Durak           |
-| visibility  | String   | public, private |
-| max_players | Number   | Zahl von 2 - 8  |
-
-```json
-{
-  "game": "Durak",
-  "visibility": "private",
-  "max_players": 8
-}
-```
-
 #### Servernachrichten
 
 ##### Lobbylist
@@ -383,6 +365,31 @@ wird.
   "lobby_id": "hAsfh8n"
 }
 ```
+
+
+### Create
+
+#### Clientnachrichten
+
+##### Create Lobby
+
+Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
+
+| Name        | Datentyp | Zusatz          |
+| :---------- | :------- | :-------------- |
+| game        | String   | Durak           |
+| visibility  | String   | public, private |
+| max_players | Number   | Zahl von 2 - 8  |
+
+```json
+{
+  "game": "Durak",
+  "visibility": "private",
+  "max_players": 8
+}
+```
+
+#### Servernachrichten
 
 ##### Lobby created
 
