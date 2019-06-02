@@ -239,6 +239,22 @@ erreichbar.
 }
 ```
 
+#### Game
+
+| Name        | Datentyp | Zusatz      |
+| :---------- | :------- | :---------- |
+| game_name   | String   |             |
+| show_name   | String   | Anzeigename |
+| max_players | Number   |             |
+
+```json
+{
+  "game_name": "maumau",
+  "show_name": "Mau Mau",
+  "max_players": "8"
+}
+```
+
 #### Lobby
 
 | Name        | Datentyp | Zusatz                    |
@@ -403,9 +419,18 @@ Diese Nachricht wird dem Client geschickt, wenn er die Lobby erstellen möchte. 
 
 ```json
 {
-  "game_name": "maumau",
-  "show_name": "Mau Mau",
-  "max_players": "8"
+  "games": [
+    {
+      "game_name": "maumau",
+      "show_name": "Mau Mau",
+      "max_players": "8"
+    },
+    {
+      "game_name": "cardsagainsthumanity",
+      "show_name": "Cards Against Humanity",
+      "max_players": "8"
+    }  
+  ]
 }
 ```
 
