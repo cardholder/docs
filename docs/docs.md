@@ -391,6 +391,24 @@ Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 
 #### Servernachrichten
 
+##### Game Options
+
+Diese Nachricht wird dem Client geschickt, wenn er die Lobby erstellen möchte. Dies sind die Informationen, welche Einstellungen er beim erstellen der Lobby vornehmen kann.
+
+| Name        | Datentyp | Zusatz                                                       |
+| :---------- | :------- | :----------------------------------------------------------- |
+| game_name   | String   | Name des Spiels                                              |
+| show_name   | String   | Anzeigename des Spiels                                       |
+| max_players | Number   | Maximale Anzahl der Spieler, die dieses Spiel spielen können |
+
+```json
+{
+  "game_name": "maumau",
+  "show_name": "Mau Mau",
+  "max_players": "8"
+}
+```
+
 ##### Lobby created
 
 Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
@@ -421,8 +439,7 @@ Server.
 
 ```json
 {
-  "lobby_id": "Durak",
-  "name": "Player 1"
+  "name": "Player 1",
 }
 ```
 
