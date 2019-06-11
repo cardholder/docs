@@ -452,6 +452,20 @@ den Server.
 }
 ```
 
+##### Kick Lobby
+
+Wenn ein Client von der Lobby gekickt wird.
+
+| Name      | Datentyp | Zusatz |
+| :-------- | :------- | :----- |
+| player_id | Number   |        |
+
+```json
+{
+    "message": "start"
+}
+```
+
 ##### Mau Mau
 
 ###### Karte legen
