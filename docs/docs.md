@@ -287,13 +287,13 @@ erreichbar.
 | :---- | :------- | :--------- |
 | id    | Number   |            |
 | value | String   |            |
-| color | String   | d, c, s, h |
+| symbol | String   | d, c, s, h |
 
 ```json
 {
   "id": 1,
   "value": "Q",
-  "color": "d"
+  "symbol": "d"
 }
 ```
 
@@ -532,7 +532,7 @@ Ein Spieler legt eine Karte ab.
   "card": {
     "id": 1,
     "value": "Q",
-    "color": "d"
+    "symbol": "d"
   },
   "player": {
     "id": 0,
@@ -577,7 +577,7 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
     {
       "id": 1,
       "value": "Q",
-      "color": "d"
+      "symbol": "d"
     }
   ],
   "remaining_cards": 16
@@ -625,7 +625,7 @@ Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
   "card": {
     "id": 1,
     "value": "Q",
-    "color": "d"
+    "symbol": "d"
   }
 }
 ```
