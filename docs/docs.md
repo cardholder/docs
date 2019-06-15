@@ -462,7 +462,7 @@ Wenn ein Client von der Lobby gekickt wird.
 
 ```json
 {
-    "message": "start"
+    "player_id": 1
 }
 ```
 
@@ -502,6 +502,25 @@ diese Nachricht alle Clients.
 ### Mau Mau
 
 #### Clientnachrichten
+
+##### Join game
+
+Ein Spieler tritt aus der Lobby dem Spiel bei.
+
+| Name | Datentyp | Zusatz |
+| :--- | :------- | :----- |
+| id   | Number   |        |
+| name | String   |        |
+| role | String   |        |
+
+```json
+{
+  "id": 0,
+  "name": "Player 1",
+  "role": "leader"
+}
+```
+
 
 ##### Karte legen
 
