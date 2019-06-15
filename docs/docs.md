@@ -566,9 +566,10 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
-| Name  | Datentyp | Zusatz |
-| :---- | :------- | :----- |
-| cards | Card[]   |        |
+| Name            | Datentyp | Zusatz |
+| :-------------- | :------- | :----- |
+| cards           | Card[]   |        |
+| remaining_cards | Number   |        |
 
 ```json
 {
@@ -578,7 +579,8 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
       "value": "Q",
       "color": "d"
     }
-  ]
+  ],
+  "remaining_cards": 16
 }
 ```
 
@@ -586,11 +588,11 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
-| Name           | Datentyp | Zusatz |
-| :------------- | :------- | :----- |
-| player         | Player   |        |
-| cardAmount     | Number   |        |
-| remainingCards | Number   |        |
+| Name            | Datentyp | Zusatz |
+| :-------------- | :------- | :----- |
+| player          | Player   |        |
+| cardAmount      | Number   |        |
+| remaining_cards | Number   |        |
 
 ```json
 {
@@ -600,7 +602,7 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
     "role": "leader"
   },
   "cardAmount": 2,
-  "remainingCards": 16
+  "remaining_cards": 16
 }
 ```
 
