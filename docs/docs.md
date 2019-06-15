@@ -507,17 +507,13 @@ diese Nachricht alle Clients.
 
 Ein Spieler tritt aus der Lobby dem Spiel bei.
 
-| Name | Datentyp | Zusatz |
-| :--- | :------- | :----- |
-| id   | Number   |        |
-| name | String   |        |
-| role | String   |        |
+| Name        | Datentyp | Zusatz |
+| :---------- | :------- | :----- |
+| player_id   | Number   |        |
 
 ```json
 {
-  "id": 0,
-  "name": "Player 1",
-  "role": "leader"
+  "player_id": 0
 }
 ```
 
