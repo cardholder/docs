@@ -466,50 +466,6 @@ Wenn ein Client von der Lobby gekickt wird.
 }
 ```
 
-##### Mau Mau
-
-###### Karte legen
-
-Ein Spieler legt eine Karte ab.
-
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| card   | Card     |        |
-| player | Player   |        |
-
-```json
-{
-  "card": {
-    "id": 1,
-    "value": "Q",
-    "color": "d"
-  },
-  "player": {
-    "id": 0,
-    "name": "Player 1",
-    "role": "leader"
-  }
-}
-```
-
-###### Ziehen
-
-Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
-
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| player | Player   |        |
-
-```json
-{
-  "player": {
-    "id": 0,
-    "name": "Player 1",
-    "role": "leader"
-  }
-}
-```
-
 #### Servernachrichten
 
 ##### Start Game
@@ -543,9 +499,55 @@ diese Nachricht alle Clients.
 }
 ```
 
-##### Mau Mau
+### Mau Mau
 
-###### Ziehen
+#### Clientnachrichten
+
+##### Karte legen
+
+Ein Spieler legt eine Karte ab.
+
+| Name   | Datentyp | Zusatz |
+| :----- | :------- | :----- |
+| card   | Card     |        |
+| player | Player   |        |
+
+```json
+{
+  "card": {
+    "id": 1,
+    "value": "Q",
+    "color": "d"
+  },
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
+}
+```
+
+##### Ziehen
+
+Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+
+| Name   | Datentyp | Zusatz |
+| :----- | :------- | :----- |
+| player | Player   |        |
+
+```json
+{
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
+}
+```
+
+#### Servernachrichten
+
+##### Ziehen
 
 Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
@@ -565,7 +567,7 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 }
 ```
 
-###### Update ziehen
+##### Update ziehen
 
 Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
@@ -587,7 +589,7 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 }
 ```
 
-###### Update legen
+##### Update legen
 
 Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 
@@ -611,7 +613,7 @@ Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 }
 ```
 
-###### Update Zug
+##### Update Zug
 
 Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 
@@ -629,7 +631,7 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 }
 ```
 
-###### Fehlerhafte Zug
+##### Fehlerhafte Zug
 
 Spieler macht etwas unerlaubtes.
 
