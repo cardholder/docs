@@ -566,10 +566,11 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
-| Name            | Datentyp | Zusatz |
-| :-------------- | :------- | :----- |
-| cards           | Card[]   |        |
-| remaining_cards | Number   |        |
+| Name            | Datentyp | Zusatz                       |
+| :-------------- | :------- | :--------------------------- |
+| cards           | Card[]   |                              |
+| remaining_cards | Number   |                              |
+| current_player  | Player   | Spieler der am Zug ist       |
 
 ```json
 {
@@ -580,7 +581,12 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
       "symbol": "d"
     }
   ],
-  "remaining_cards": 16
+  "remaining_cards": 16,
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
 }
 ```
 
@@ -588,11 +594,12 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
-| Name            | Datentyp | Zusatz |
-| :-------------- | :------- | :----- |
-| player          | Player   |        |
-| cardAmount      | Number   |        |
-| remaining_cards | Number   |        |
+| Name            | Datentyp | Zusatz                       |
+| :-------------- | :------- | :--------------------------- |
+| player          | Player   |                              |
+| cardAmount      | Number   |                              |
+| remaining_cards | Number   |                              |
+| current_player  | Player   | Spieler der am Zug ist       |
 
 ```json
 {
@@ -602,7 +609,12 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
     "role": "leader"
   },
   "cardAmount": 2,
-  "remaining_cards": 16
+  "remaining_cards": 16,
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
 }
 ```
 
@@ -610,10 +622,11 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
 Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| player | Player   |        |
-| card   | Card     |        |
+| Name            | Datentyp | Zusatz                       |
+| :-------------- | :------- | :--------------------------- |
+| player          | Player   |                              |
+| card            | Card     |                              |
+| current_player  | Player   | Spieler der am Zug ist       |
 
 ```json
 {
@@ -626,21 +639,8 @@ Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
     "id": 1,
     "value": "Q",
     "symbol": "d"
-  }
-}
-```
-
-##### Update Zug
-
-Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
-
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| player | Player   |        |
-
-```json
-{
-  "player": {
+  },
+  "current_player": {
     "id": 0,
     "name": "Player 1",
     "role": "leader"
