@@ -287,7 +287,7 @@ erreichbar.
 | :---- | :------- | :--------- |
 | id    | Number   |            |
 | value | String   |            |
-| symbol | String   | d, c, s, h |
+| symbol | String  | d, c, s, h |
 
 ```json
 {
@@ -561,6 +561,49 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 ```
 
 #### Servernachrichten
+
+##### Initialized Game
+
+Ein Spieler tritt der Lobby bei und erhält die Nötigen Daten um das Spiel beim Client darzustellen.
+
+| Name                      | Datentyp | Zusatz                       |
+| :------------------------ | :------- | :--------------------------- |
+| players                   | Player[] |                              |
+| cards                     | Cards[]  |                              |
+| current_player            | Player   | Spieler der am Zug ist       |
+| remaining_cards           | Number   | Spieler der am Zug ist       |
+| top_card_of_discard_pile  | Player   | Spieler der am Zug ist       |
+
+
+```json
+{
+  "players": [
+    {
+      "id": 0,
+      "name": "Player 1",
+      "role": "leader"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "value": "Q",
+      "symbol": "d"
+    }
+  ],
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  },
+  "remaining_cards": 16,
+  "top_card_of_discard_pile": {
+      "id": 1,
+      "value": "Q",
+      "symbol": "d"
+    }
+}
+```
 
 ##### Ziehen
 
