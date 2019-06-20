@@ -691,6 +691,22 @@ Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 }
 ```
 
+##### Sieger
+
+Sieger wird an Spiel geschickt.
+
+| Name      | Datentyp | Zusatz |
+| :-------- | :------- | :----- |
+| message   | String   |        |
+| player_id | Number   |        |
+
+```json
+{
+  "message": "Sieger",
+  "player_id": 0
+}
+```
+
 ##### Fehlerhafte Zug
 
 Spieler macht etwas unerlaubtes.
