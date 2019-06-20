@@ -611,13 +611,13 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 
 | Name            | Datentyp | Zusatz                       |
 | :-------------- | :------- | :--------------------------- |
-| cards           | Card[]   |                              |
+| cards_drawn     | Card[]   |                              |
 | remaining_cards | Number   |                              |
 | current_player  | Player   | Spieler der am Zug ist       |
 
 ```json
 {
-  "cards": [
+  "cards_drawn": [
     {
       "id": 1,
       "value": "Q",
