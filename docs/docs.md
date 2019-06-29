@@ -560,9 +560,9 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 }
 ```
 
-###### Bubenwunsch
+##### Bubenwunsch
 
-Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+Ein Spieler wünscht sich eine Kartenfarbe.
 
 | Name   | Datentyp | Zusatz  |
 | :----- | :------- | :------ |
@@ -721,10 +721,10 @@ Sieger wird an Spiel geschickt.
 }
 ```
 
-<<<<<<< HEAD
-###### Update Bubenwunsch
 
-Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
+##### Update Bubenwunsch
+
+Der Server sendet jedem Spieler, welcher Kartenfarbe sich gewünscht wurde und wer der aktuelle Spieler ist.
 
 | Name           | Datentyp | Zusatz  |
 | :------------- | :------- | :------ |
@@ -743,9 +743,9 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 ```
 
 
-###### Spielerwunsch
+##### Spielerwunsch
 
-Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
+Der Server sendet dem Spieler, dass er sich eine Farbe wünschen soll.
 
 | Name    | Datentyp | Zusatz |
 | :------ | :------- | :----- |
@@ -757,10 +757,7 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 }
 ```
 
-###### Fehlerhafte Zug
-=======
 ##### Fehlerhafte Zug
->>>>>>> a26edb1381878c4c9797f872c9a731adc94fec4b
 
 Spieler macht etwas unerlaubtes.
 
