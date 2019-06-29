@@ -283,17 +283,17 @@ erreichbar.
 
 #### Card
 
-| Name  | Datentyp | Zusatz |
-| :---- | :------- | :----- |
-| id    | Number   |        |
-| value | String   |        |
-| color | String   |        |
+| Name  | Datentyp | Zusatz     |
+| :---- | :------- | :--------- |
+| id    | Number   |            |
+| value | String   |            |
+| symbol | String  | d, c, s, h |
 
 ```json
 {
   "id": 1,
   "value": "Q",
-  "color": "diamonds"
+  "symbol": "d"
 }
 ```
 
@@ -462,65 +462,7 @@ Wenn ein Client von der Lobby gekickt wird.
 
 ```json
 {
-    "message": "start"
-}
-```
-
-##### Mau Mau
-
-###### Karte legen
-
-Ein Spieler legt eine Karte ab.
-
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| card   | Card     |        |
-| player | Player   |        |
-
-```json
-{
-  "card": {
-    "id": 1,
-    "value": "Q",
-    "color": "diamonds"
-  },
-  "player": {
-    "id": 0,
-    "name": "Player 1",
-    "role": "leader"
-  }
-}
-```
-
-###### Ziehen
-
-Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
-
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| player | Player   |        |
-
-```json
-{
-  "player": {
-    "id": 0,
-    "name": "Player 1",
-    "role": "leader"
-  }
-}
-```
-
-###### Bubenwunsch
-
-Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
-
-| Name   | Datentyp | Zusatz  |
-| :----- | :------- | :------ |
-| symbol | Char     | s,c,d,h |
-
-```json
-{
-  "symbol": "d"
+    "player_id": 1
 }
 ```
 
@@ -557,37 +499,164 @@ diese Nachricht alle Clients.
 }
 ```
 
-##### Mau Mau
+### Mau Mau
 
-###### Ziehen
+#### Clientnachrichten
 
-Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+##### Join game
 
-| Name  | Datentyp | Zusatz |
-| :---- | :------- | :----- |
-| cards | Card[]   |        |
+Ein Spieler tritt aus der Lobby dem Spiel bei.
+
+| Name        | Datentyp | Zusatz |
+| :---------- | :------- | :----- |
+| player_id   | Number   |        |
 
 ```json
 {
+  "player_id": 0
+}
+```
+
+
+##### Karte legen
+
+Ein Spieler legt eine Karte ab.
+
+| Name   | Datentyp | Zusatz |
+| :----- | :------- | :----- |
+| card   | Card     |        |
+| player | Player   |        |
+
+```json
+{
+  "card": {
+    "id": 1,
+    "value": "Q",
+    "symbol": "d"
+  },
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
+}
+```
+
+##### Ziehen
+
+Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+
+| Name   | Datentyp | Zusatz |
+| :----- | :------- | :----- |
+| player | Player   |        |
+
+```json
+{
+  "player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
+}
+```
+
+###### Bubenwunsch
+
+Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+
+| Name   | Datentyp | Zusatz  |
+| :----- | :------- | :------ |
+| symbol | Char     | s,c,d,h |
+
+```json
+{
+  "symbol": "d"
+}
+```
+
+#### Servernachrichten
+
+##### Initialized Game
+
+Ein Spieler tritt der Lobby bei und erhält die Nötigen Daten um das Spiel beim Client darzustellen.
+
+| Name                      | Datentyp | Zusatz                       |
+| :------------------------ | :------- | :--------------------------- |
+| players                   | Player[] |                              |
+| cards                     | Cards[]  |                              |
+| current_player            | Player   | Spieler der am Zug ist       |
+| remaining_cards           | Number   | Spieler der am Zug ist       |
+| top_card_of_discard_pile  | Player   | Spieler der am Zug ist       |
+
+
+```json
+{
+  "players": [
+    {
+      "id": 0,
+      "name": "Player 1",
+      "role": "leader"
+    }
+  ],
   "cards": [
     {
       "id": 1,
       "value": "Q",
-      "color": "diamonds"
+      "symbol": "d"
     }
-  ]
+  ],
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  },
+  "remaining_cards": 16,
+  "top_card_of_discard_pile": {
+      "id": 1,
+      "value": "Q",
+      "symbol": "d"
+    }
 }
 ```
 
-###### Update ziehen
+##### Ziehen
+
+Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+
+| Name            | Datentyp | Zusatz                       |
+| :-------------- | :------- | :--------------------------- |
+| cards_drawn     | Card[]   |                              |
+| remaining_cards | Number   |                              |
+| current_player  | Player   | Spieler der am Zug ist       |
+
+```json
+{
+  "cards_drawn": [
+    {
+      "id": 1,
+      "value": "Q",
+      "symbol": "d"
+    }
+  ],
+  "remaining_cards": 16,
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
+}
+```
+
+##### Update ziehen
 
 Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
-| Name           | Datentyp | Zusatz |
-| :------------- | :------- | :----- |
-| player         | Player   |        |
-| cardAmount     | Number   |        |
-| remainingCards | Number   |        |
+| Name            | Datentyp | Zusatz                       |
+| :-------------- | :------- | :--------------------------- |
+| player          | Player   |                              |
+| cardAmount      | Number   |                              |
+| remaining_cards | Number   |                              |
+| current_player  | Player   | Spieler der am Zug ist       |
 
 ```json
 {
@@ -597,18 +666,24 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
     "role": "leader"
   },
   "cardAmount": 2,
-  "remainingCards": 16
+  "remaining_cards": 16,
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
 }
 ```
 
-###### Update legen
+##### Update legen
 
 Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| player | Player   |        |
-| card   | Card     |        |
+| Name            | Datentyp | Zusatz                       |
+| :-------------- | :------- | :--------------------------- |
+| player          | Player   |                              |
+| card            | Card     |                              |
+| current_player  | Player   | Spieler der am Zug ist       |
 
 ```json
 {
@@ -620,22 +695,9 @@ Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
   "card": {
     "id": 1,
     "value": "Q",
-    "color": "diamonds"
-  }
-}
-```
-
-###### Update Zug
-
-Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
-
-| Name   | Datentyp | Zusatz |
-| :----- | :------- | :----- |
-| player | Player   |        |
-
-```json
-{
-  "player": {
+    "symbol": "d"
+  },
+  "current_player": {
     "id": 0,
     "name": "Player 1",
     "role": "leader"
@@ -643,6 +705,23 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 }
 ```
 
+##### Sieger
+
+Sieger wird an Spiel geschickt.
+
+| Name      | Datentyp | Zusatz |
+| :-------- | :------- | :----- |
+| message   | String   |        |
+| player_id | Number   |        |
+
+```json
+{
+  "message": "Sieger",
+  "player_id": 0
+}
+```
+
+<<<<<<< HEAD
 ###### Update Bubenwunsch
 
 Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
@@ -679,6 +758,9 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
 ```
 
 ###### Fehlerhafte Zug
+=======
+##### Fehlerhafte Zug
+>>>>>>> a26edb1381878c4c9797f872c9a731adc94fec4b
 
 Spieler macht etwas unerlaubtes.
 
