@@ -510,6 +510,20 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 }
 ```
 
+###### Bubenwunsch
+
+Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
+
+| Name   | Datentyp | Zusatz  |
+| :----- | :------- | :------ |
+| symbol | Char     | s,c,d,h |
+
+```json
+{
+  "symbol": "d"
+}
+```
+
 #### Servernachrichten
 
 ##### Start Game
@@ -626,6 +640,41 @@ Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
     "name": "Player 1",
     "role": "leader"
   }
+}
+```
+
+###### Update Bubenwunsch
+
+Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
+
+| Name           | Datentyp | Zusatz  |
+| :------------- | :------- | :------ |
+| symbol         | Char     | s,c,d,h |
+| current_player | Player   |         |
+
+```json
+{
+  "symbol": "s",
+  "current_player": {
+    "id": 0,
+    "name": "Player 1",
+    "role": "leader"
+  }
+}
+```
+
+
+###### Spielerwunsch
+
+Der Server sendet jedem Spieler, welcher Spieler am Zug ist.
+
+| Name    | Datentyp | Zusatz |
+| :------ | :------- | :----- |
+| message | String   |        |
+
+```json
+{
+  "message": "Wuensch dir was"
 }
 ```
 
