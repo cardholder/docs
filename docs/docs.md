@@ -297,7 +297,7 @@ erreichbar.
 }
 ```
 
-### Lobbylist
+### /lobbylist/
 
 #### Clientnachrichten
 
@@ -383,7 +383,7 @@ wird.
 ```
 
 
-### Create
+### /create/
 
 #### Clientnachrichten
 
@@ -421,7 +421,7 @@ Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
 }
 ```
 
-### Lobby
+### /lobby/<lobby_id>/
 
 #### Clientnachrichten
 
@@ -499,7 +499,7 @@ diese Nachricht alle Clients.
 }
 ```
 
-### Mau Mau
+### /maumau/<lobby_id>/
 
 #### Clientnachrichten
 
