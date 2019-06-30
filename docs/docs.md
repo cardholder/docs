@@ -499,7 +499,7 @@ diese Nachricht alle Clients.
 }
 ```
 
-### /maumau/%60lobby_id%62/
+### /maumau/%3Clobby_id%3E/
 
 #### Clientnachrichten
 
