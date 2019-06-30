@@ -810,6 +810,11 @@ Spieler macht etwas unerlaubtes.
 
 ![Karte ziehen](./img/sequence_diagram/client_draws.svg "Sequenzdiagramm Karte ziehen")
 
+#### Karte wünschen
+
+![Karte wünschen](./img/sequence_diagram/card_wish.svg "Sequenzdiagramm Karte wünschen")
+
+
 
 ## Entwurf
 
