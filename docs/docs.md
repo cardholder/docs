@@ -421,7 +421,7 @@ Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
 }
 ```
 
-### /lobby/&#60lobby_id&#62/
+### /lobby/lobby_id:String/
 
 #### Clientnachrichten
 
@@ -499,7 +499,7 @@ diese Nachricht alle Clients.
 }
 ```
 
-### /maumau/&#3Clobby_id&#3E/
+### /maumau/lobby_id:String/
 
 #### Clientnachrichten
 
