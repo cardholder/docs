@@ -761,14 +761,20 @@ Der Server sendet dem Spieler, dass er sich eine Farbe wünschen soll.
 
 Der Server sendet jedem Spieler, welcher spieler Mau Mau verlassen hat und wer der aktuelle Spieler ist.
 
-| Name           | Datentyp | Zusatz                     |
-| :------------- | :------- | :------------------------- |
-| player_id      | Number   | player_id vom verlassenden |
-| current_player | Player   |                            |
+| Name           | Datentyp   | Zusatz                     |
+| :------------- | :--------- | :------------------------- |
+| players        | Player[]   | player_id vom verlassenden |
+| current_player | Player     |                            |
 
 ```json
 {
-  "player_id": "1",
+  "players": [
+    {
+      "id": 0,
+      "name": "Player 1",
+      "role": "leader"
+    }
+  ],
   "current_player": {
     "id": 0,
     "name": "Player 1",
