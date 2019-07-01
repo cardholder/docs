@@ -468,6 +468,32 @@ Wenn ein Client von der Lobby gekickt wird.
 
 #### Servernachrichten
 
+##### Lobby Status
+
+Der Client bekommt den Status der aktuellen Lobby, wenn er der Lobby beitreten kann.
+
+| Name  | Datentyp | Zusatz |
+| :---- | :------- | :----- |
+| lobby | Lobby    |        |
+
+```json
+{
+  "lobby": {
+    "id": "hAsfh8n",
+    "game": "Durak",
+    "visibility": "private",
+    "max_players": 8,
+    "players": [
+      {
+        "id": 0,
+        "name": "Player 1",
+        "role": "leader"
+      }
+    ]
+  }
+}
+```
+
 ##### Start Game
 
 Der Server schickt diese Nachricht an die Clients, damit diese das Spiel laden.
