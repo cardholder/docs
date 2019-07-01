@@ -2,26 +2,26 @@
 
 ## Beschreibung
 
-Cardholder ist eine Applikation, die es ermöglicht online Kartenspiele
+cardholder ist eine Applikation, die es ermöglicht online Kartenspiele
 zu spielen. Dabei kann man mit Freunden und Menschen aus aller Welt
 spielen. Es gibt eine Auswahl von verschiedenen Kartenspielen. Die
 Nutzer können die Kartenspiele ohne Anmeldung spielen. Spieler sollen
-andere Nutzer zu einem Spiel einladen können. Cardholder ist als App und
+andere Nutzer zu einem Spiel einladen können. cardholder ist als App und
 als Webseite verfügbar.
 
 ## Ziele
 
-Das Ziel von Cardholder ist es, dass Familie, Freunde und
+Das Ziel von cardholder ist es, dass Familie, Freunde und
 Kartenspiel-Begeisterte zusammen Kartenspiele spielen können. Die
 Motivation ist eine freie und für jeden zugängliche Software
 bereitzustellen. Es werden verschiedene Kartenspiele zur Verfügung
 gestellt.
 
-Cardholder setzt vorraus, dass die Nutzer die entsprechenden Regeln der
+cardholder setzt vorraus, dass die Nutzer die entsprechenden Regeln der
 jeweiligen Kartenspiele kennen. Weitere Vorkenntnisse sind nicht
 erforderlich.
 
-Bei Cardholder ist es nicht möglich eigene Kartenspiele hinzuzufügen.
+Bei cardholder ist es nicht möglich eigene Kartenspiele hinzuzufügen.
 Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 # **Anforderungen**
@@ -865,12 +865,6 @@ Spieler macht etwas unerlaubtes.
 #### Karte wünschen
 
 ![Karte wünschen](./img/sequence_diagram/card_wish.svg "Sequenzdiagramm Karte wünschen")
-
-
-
-## Entwurf
-
-    - Detaillierte UML-Diagramme für relevante Softwarebausteine
 
 # **Projektorganisation**
 
