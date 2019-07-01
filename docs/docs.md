@@ -840,12 +840,6 @@ Spieler macht etwas unerlaubtes.
 
 ![Karte wünschen](./img/sequence_diagram/card_wish.svg "Sequenzdiagramm Karte wünschen")
 
-
-
-## Entwurf
-
-    - Detaillierte UML-Diagramme für relevante Softwarebausteine
-
 # **Projektorganisation**
 
 ## Annahmen
