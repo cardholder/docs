@@ -948,6 +948,12 @@ diverse Datenquellen integriert und für die Anwendung bereitgestellt.
 ## Glossar
 
 **Benutzer:** Jede Person ist ein Benutzer  
-**Lobby:** Empfangsraum/Vorhalle (_methaphorisch_) für Spieler  
-**Lobbyleiter:** Ein Lobbyleiter ist ein Benutzer, der eine Lobby
+**Lobby:** Empfangsraum/Vorhalle (_methaphorisch_) für Spieler.  
+**Lobbylist:** Eine list von Lobbys.
+**Lobbyleiter:** Ein Lobbyleiter ist ein Benutzer, der eine Lobby.
 erstellt hat. Er ist Leiter dieser Lobby und kann Einstellungen treffen.
+**Route:** Eine Route ist der Pfad zum Backend, damit Frontend und Backend kommunizieren können.
+**Frontend:** Die Applikation, die der Benutzer sieht.
+**Backend:** Die Logik. Kommuniziert mit dem Frontend. Besitzt eine Datenbank.
+**Clientnachrichten:** Nachrichten die vom Frontend zum Backend geschickt werden.
+**Servernachrichten:** Nachrichten die vom Backend zum Frontend geschickt werden.
