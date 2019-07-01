@@ -296,22 +296,11 @@ erreichbar.
 
 ### /lobbylist/
 
-#### Clientnachrichten
-
-##### Hello
-
-Client verbindet sich mit dem Server.
-
-```json
-{}
-```
-
 #### Servernachrichten
 
 ##### Lobbylist
 
-Wird dem Client geschickt um die Liste aller Lobbys anzuzeigen. Antwort
-auf _[hello](#hello)_.
+Wird dem Client geschickt um die Liste aller Lobbys anzuzeigen, wenn der Client die Route aufruft.
 
 | Name    | Datentyp | Zusatz |
 | :------ | :------- | :----- |
@@ -337,7 +326,7 @@ auf _[hello](#hello)_.
 }
 ```
 
-##### Lobbylist Entry
+##### Lobbylist Eintrag
 
 Diese Nachricht wird allen Clients geschickt, wenn eine neue Lobby
 erstellt wurde oder eine Aktualisierung stattgefunden hat.
@@ -364,7 +353,7 @@ erstellt wurde oder eine Aktualisierung stattgefunden hat.
 }
 ```
 
-##### Remove Lobbylist Entry
+##### Lösche Lobbylist Eintrag
 
 Diese Nachricht wird allen Clients geschickt, wenn die Lobby gelöscht
 wird.
@@ -384,7 +373,7 @@ wird.
 
 #### Clientnachrichten
 
-##### Create Lobby
+##### Lobby erstellen
 
 Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 
@@ -404,7 +393,7 @@ Wird dem Server geschickt, wenn ein Client eine neue Lobby erstellt hat.
 
 #### Servernachrichten
 
-##### Lobby created
+##### Lobby erstellt
 
 Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
 
@@ -422,7 +411,7 @@ Diese Nachricht wird dem Client geschickt, der die Lobby erstellt hat.
 
 #### Clientnachrichten
 
-##### Join Lobby
+##### Lobby beitreten
 
 Wenn ein Client einer Lobby beitritt, schickt er diese Nachricht an den
 Server.
@@ -438,7 +427,7 @@ Server.
 }
 ```
 
-##### Start Lobby
+##### Spiel starten
 
 Wenn der Lobby Leader die Lobby startet, schickt er diese Nachricht an
 den Server.
@@ -449,7 +438,7 @@ den Server.
 }
 ```
 
-##### Kick Lobby
+##### Spieler rausschmeißen
 
 Wenn ein Client von der Lobby gekickt wird.
 
@@ -465,7 +454,7 @@ Wenn ein Client von der Lobby gekickt wird.
 
 #### Servernachrichten
 
-##### Lobby Status
+##### Lobby status
 
 Der Client bekommt den Status der aktuellen Lobby, wenn er der Lobby beitreten kann.
 
@@ -491,7 +480,7 @@ Der Client bekommt den Status der aktuellen Lobby, wenn er der Lobby beitreten k
 }
 ```
 
-##### Start Game
+##### Starte spiel
 
 Der Server schickt diese Nachricht an die Clients, damit diese das Spiel laden.
 
@@ -501,7 +490,7 @@ Der Server schickt diese Nachricht an die Clients, damit diese das Spiel laden.
 }
 ```
 
-##### Update Lobby
+##### Lobby aktualisieren
 
 Wenn ein Player die Lobby verlässt oder betritt, schickt der Server
 diese Nachricht alle Clients.
@@ -526,7 +515,7 @@ diese Nachricht alle Clients.
 
 #### Clientnachrichten
 
-##### Join game
+##### Spiel beitreten
 
 Ein Spieler tritt aus der Lobby dem Spiel bei.
 
@@ -599,7 +588,7 @@ Ein Spieler wünscht sich eine Kartenfarbe.
 
 #### Servernachrichten
 
-##### Initialized Game
+##### Spiel initialisieren
 
 Ein Spieler tritt der Lobby bei und erhält die Nötigen Daten um das Spiel beim Client darzustellen.
 
@@ -670,7 +659,7 @@ Ein Spieler muss eine Karte ziehen eine Nachricht vom Stapel.
 }
 ```
 
-##### Update ziehen
+##### Ziehen aktualisieren
 
 Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 
@@ -698,7 +687,7 @@ Der Server sendet jedem Spieler, welcher Spieler wie viel gezogen hat.
 }
 ```
 
-##### Update legen
+##### Legen aktualisieren
 
 Der Server sendet jedem Spieler, welcher Spieler was gelegt hat.
 
@@ -745,7 +734,7 @@ Sieger wird an Spiel geschickt.
 ```
 
 
-##### Update Bubenwunsch
+##### Bubenwunsch aktualisieren
 
 Der Server sendet jedem Spieler, welcher Kartenfarbe sich gewünscht wurde und wer der aktuelle Spieler ist.
 
