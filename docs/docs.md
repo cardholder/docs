@@ -37,9 +37,6 @@ Des Weiteren ist es nicht möglich seinen Spielstand zu speichern.
 
 ![Use-Case Diagramm](./img/ch_usecase.svg "Use-Case Diagramm")
 
-    - Use-Case Diagramme
-    - Strukturierung der Diagramme in funktionale Gruppen
-
 ## Nicht-funktionale Anforderungen
 
 ### Rahmenbedingungen
@@ -823,9 +820,6 @@ Spieler macht etwas unerlaubtes.
 }
 ```
 
-    - Schnittstellenbeschreibung
-    - Auflistung der nach außen sichtbaren Schnittstelle der Softwarebausteine
-
 ## Datenmodell
 
 ![Datenbankdiagramm](./img/database/database_erm.svg "Datenbankdiagramm")
@@ -957,7 +951,7 @@ diverse Datenquellen integriert und für die Anwendung bereitgestellt.
 
   - 100% der Funktionalität, Tests und Dokumentation
 
-- **KW 26 (25.5)**
+- **KW 26 (25.6)**
 
   - Fertigstellung der Projekt Präsentation
 
@@ -972,9 +966,3 @@ diverse Datenquellen integriert und für die Anwendung bereitgestellt.
 **Lobby:** Empfangsraum/Vorhalle (_methaphorisch_) für Spieler  
 **Lobbyleiter:** Ein Lobbyleiter ist ein Benutzer, der eine Lobby
 erstellt hat. Er ist Leiter dieser Lobby und kann Einstellungen treffen.
-
-## Referenzen
-
-    - Handbücher, Gesetze
-
-## Index
