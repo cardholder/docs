@@ -828,10 +828,6 @@ Spieler macht etwas unerlaubtes.
 
 ### Sequenzdiagramme
 
-#### Spiel öffnen
-
-![Spiel oeffnen](./img/sequence_diagram/open_game.svg "Sequenzdiagramm Spiel Öffnen")
-
 #### Lobby beitreten
 
 ![Lobby beitreten](./img/sequence_diagram/join_lobby.svg "Sequenzdiagramm Lobby beitreten")
